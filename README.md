@@ -50,10 +50,6 @@ Node.js • Express • SQLite / PostgreSQL
 
 ```bash
 checklist-verde/
-├── assets/                 # Recursos visuais do projeto
-│   ├── fonts/              # Fontes
-│   ├── icons/              # Ícones
-│   └── images/             # Imagens
 ├── backend/                # API e lógica do servidor
 │   ├── config/             # Configurações
 │   ├── controllers/        # Controladores das rotas
@@ -66,6 +62,10 @@ checklist-verde/
 │   └── seeds/              # Dados iniciais
 ├── frontend/               # Interface do usuário
 │   ├── index.html          # Página inicial
+│   ├── assets/             # Recursos visuais do projeto
+│   │   ├── fonts/          # Fontes
+│   │   ├── icons/          # Ícones
+│   │   └── images/         # Imagens
 │   ├── pages/              # Páginas internas
 │   │   ├── login.html      # Login
 │   │   ├── signup.html     # Cadastro
