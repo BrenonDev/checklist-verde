@@ -5,8 +5,8 @@
 </p>
 
 <p align="center">
-  <img src="https://img.shields.io/badge/status-em%20desenvolvimento-yellow?style=for-the-badge"/>
-  <img src="https://img.shields.io/badge/licen%C3%A7a-MIT-green?style=for-the-badge"/>
+  <img src="https://img.shields.io/badge/status-em%20desenvolvimento-green?style=for-the-badge"/>
+  <img src="https://img.shields.io/badge/licen%C3%A7a-CC%20BY--NC--SA%204.0-yellow?style=for-the-badge"/>
   <img src="https://img.shields.io/badge/feito%20por-Facens-blue?style=for-the-badge"/>
 </p>
 
@@ -16,7 +16,7 @@
 ## 🖼️ Preview
 
 <p align="center">
-  <img src="assets/images/welcome-screen.png" alt="Tela de boas-vindas do Checklist Verde" width="300"/>
+  <img src="frontend/assets/images/welcome-screen.png" alt="Tela de boas-vindas do Checklist Verde" width="300"/>
 </p>
 
 ---
@@ -91,6 +91,7 @@ checklist-verde/
 │       ├── dashboard.js    # Painel
 │       ├── checklists.js   # Checklists
 │       └── settings.js     # Configurações
+├── LICENSE.md              # Licença
 ├── README.md               # Documentação
 └── .gitignore              # Ignorados pelo Git
 ```
@@ -159,8 +160,13 @@ Instituição: **Centro Universitário Facens - Sorocaba-SP**
 
 ## 📄 Licença
 
-Distribuído sob a licença MIT.
-Sinta-se livre para usar, modificar e compartilhar. 💚
+Este projeto é distribuído sob a **Licença Creative Commons Atribuição - Não Comercial - Compartilha Igual 4.0 Internacional (CC BY-NC-SA 4.0)**.
+
+- **Atribuição (BY)**: Você deve dar crédito ao autor original de forma apropriada, fornecer um link para a licença e indicar se houve alterações.
+- **Não Comercial (NC)**: Você não pode usar o material para fins comerciais.
+- **Compartilha Igual (SA)**: Se você modificar ou construir sobre o material, deve distribuir suas contribuições sob a mesma licença.
+
+Sinta-se livre para usar, modificar e compartilhar, desde que respeite as condições acima. 💚
 
 
 ---
