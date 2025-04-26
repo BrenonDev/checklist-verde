@@ -72,7 +72,7 @@ O banco de dados do Checklist Verde é formado por várias tabelas interconectad
 
 ```sql
 -- Criação do banco de dados
-CREATE DATABASE IF NOT EXISTS ChecklistVerde;                  -- No SQL Server, o IF NOT EXISTS pode ser removido se der erro
+CREATE DATABASE IF NOT EXISTS ChecklistVerde;                     -- No SQL Server, o IF NOT EXISTS pode ser removido se der erro
 GO
 
 -- Seleciona o banco de dados
@@ -154,6 +154,18 @@ CREATE TABLE Tip (
 <br>
 
 ## 📁 Estrutura de Pastas
+
+A estrutura de pastas deste projeto foi organizada para separar claramente as responsabilidades de cada parte do sistema, garantindo uma navegação e manutenção mais simples. A seguir, uma descrição das principais pastas e seus conteúdos:
+
+- backend/: Contém a API e toda a lógica do servidor. Inclui configurações, controladores de rotas, regras de negócio e modelos do banco de dados.
+
+- database/: Estrutura do banco de dados, com diagramas, migrações para criação de tabelas e dados iniciais para preenchimento.
+
+- frontend/: Responsável pela interface do usuário, com páginas HTML, recursos visuais (fontes, ícones, imagens), arquivos de estilo CSS e scripts JavaScript.
+
+Além dessas pastas principais, o projeto contém arquivos como README.md (documentação), LICENSE.md (para a licença do projeto) e .gitignore (arquivos ignorados pelo Git).
+
+Essa estrutura modularizada facilita o entendimento e a expansão do projeto à medida que novas funcionalidades são adicionadas.
 
 ```bash
 checklist-verde/
