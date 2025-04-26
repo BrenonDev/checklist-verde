@@ -13,10 +13,14 @@
 ---
 <br>
 
-## 🖼️ Preview
+<h2 align="center"> 🖼️ Preview </h2>
 
 <p align="center">
-  <img src="frontend/assets/images/welcome-screen.png" alt="Tela de boas-vindas do Checklist Verde" width="300"/>
+  <img
+    src="frontend/assets/images/welcome-screen.png"
+    alt="Tela de boas-vindas do Checklist Verde"
+    width="300"
+  />
 </p>
 
 ---
@@ -42,6 +46,32 @@
 
 **Backend (planejado):**  
 Node.js • Express • SQLite / PostgreSQL
+
+---
+<br>
+
+## 🛢️ Banco de Dados
+
+A estrutura do banco de dados do projeto **Checklist Verde** é composta por várias tabelas inter-relacionadas, com o objetivo de armazenar informações sobre os usuários, checklists, tarefas, dicas, e histórico de XP. O sistema utiliza um banco de dados relacional, compatível com MySQL e SQL Server.
+
+<h3 align="center">🗄️ MER – Modelo Entidade Relacionamento</h3>
+
+<p align="center">
+  <img
+    src="database/diagram/erd_checklist_verde.png"
+    alt="Modelo Entidade Relacionamento do projeto Checklist Verde"
+    max-width="700"
+  />
+</p>
+
+<h3 align="center">🎯 Estrutura do Banco de Dados
+</h3>
+
+Database: SustainabilityApp
+
+```sql
+
+```
 
 ---
 <br>

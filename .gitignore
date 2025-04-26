@@ -1,0 +1,3 @@
+# Ignorar todos os arquivos que o brModelo.exe cria, exceto o próprio brModelo.exe
+/database/diagram/brModelo/*
+!/database/diagram/brModelo/brModelo.exe
