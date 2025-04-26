@@ -1,9 +1,9 @@
 -- Criação do banco de dados
-CREATE DATABASE IF NOT EXISTS SustainabilityApp;                  -- No SQL Server, o IF NOT EXISTS pode ser removido se der erro
+CREATE DATABASE IF NOT EXISTS ChecklistVerde;                     -- No SQL Server, o IF NOT EXISTS pode ser removido se der erro
 GO
 
 -- Seleciona o banco de dados
-USE SustainabilityApp;
+USE ChecklistVerde;
 GO
 
 -- Tabela: User
