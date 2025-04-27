@@ -9,59 +9,63 @@
     <title>Checklist Verde</title>
 
     <link rel="stylesheet" href="styles/app.css">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Sans+Condensed:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Fira+Sans+Extra+Condensed:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
 </head>
 <body>
-    <header>
-        <nav>
-            <div class="logo">
-                <div class="check">
-                    <img src="assets/icons/check.svg" alt="Ícone de check">
+    <div class="container">
+        <header>
+            <nav class="flex space-between align-center gap-0.5">
+                <div class="logo flex align-center gap-0.5">
+                    <div class="logo-symbol">
+                        <img src="assets/images/logo-checklist-verde-symbol.png" alt="Ícone de check">
+                    </div>
+                    <span>CHECKLIST VERDE</span>
                 </div>
-                <span>CHECKLIST VERDE</span>
+                <a href="#">Entrar</a>
+            </nav>
+            <div class="hero">
+                <h1>Plataforma de Sustentabilidade Gamificada</h1>
+                <p>
+                    Adote hábitos sustentáveis de forma divertida!<br>
+                    Complete checklists diários, ganhe XP e acompanhe seu progresso.
+                </p>
+                <a href="#">Começar</a>
             </div>
-            <a href="#">Entrar</a>
-        </nav>
-        <div class="hero">
-            <h1>Plataforma de Sustentabilidade Gamificada</h1>
-            <p>Adote hábitos sustentáveis de forma divertida!</p>
-            <p>Complete checklists diários, ganhe XP e acompanhe seu progresso.</p>
-            <a href="#">Começar</a>
-        </div>
-    </header>
-    <main>
-        <div class="feature checklist-feature">
-            <div class="icon">
-                <img src="assets/icons/list-check.svg" alt="Ícone de checklist">
+        </header>
+        <main class="flex flex-column gap-0.5">
+            <div class="feature checklist-feature flex align-center gap-0.5">
+                <div class="icon flex align-center">
+                    <img src="assets/icons/checklist.svg" alt="Ícone de checklist">
+                </div>
+                <div class="text">
+                    <h2>Checklist Sustentável</h2>
+                    <p>Realize ações ecológicas diárias e marque os itens concluídos.</p>
+                </div>
             </div>
-            <div class="text">
-                <h2>Checklist Sustentável</h2>
-                <p>Realize ações ecológicas diárias e marque os itens concluídos.</p>
+            <div class="feature score-feature flex align-center gap-0.5">
+                <div class="icon flex justify-center  align-center">
+                    <span>XP</span>
+                </div>
+                <div class="text">
+                    <h2>Sistema de Pontuação</h2>
+                    <p>Ganhe pontos (XP) por cada tarefa sustentável realizada.</p>
+                </div>
             </div>
-        </div>
-        <div class="feature score-feature">
-            <div class="icon">
-                <span>XP</span>
+            <div class="feature tips-feature flex align-center gap-0.5">
+                <div class="icon flex align-center">
+                    <img src="assets/icons/eco-light-bulb.svg" alt="Ícone de lâmpada ecológica">
+                </div>
+                <div class="text">
+                    <h2>Dicas Sustentáveis</h2>
+                    <p>Receba e aplique dicas diárias para uma vida mais sustentável</p>
+                </div>
             </div>
-            <div class="text">
-                <h2>Sistema de Pontuação</h2>
-                <p>Ganhe pontos (XP) por cada tarefa sustentável realizada.</p>
-            </div>
-        </div>
-        <div class="feature tips-feature">
-            <div class="icon">
-                <img src="assets/icons/eco-light-bulb.svg" alt="Ícone de lâmpada ecológica">
-            </div>
-            <div class="text">
-                <h2>Dicas Sustentáveis</h2>
-                <p>Receba e aplique dicas diárias para uma vida mais sustentável</p>
-            </div>
-        </div>
-    </main>
-    <footer>
-        <p class="inspirational-quote">"Pequenas ações, grandes mudanças."</p>
-        <p class="copyright">&copy; 2025 Checklist Verde. Todos os direitos reservados.</p>
-    </footer>
+        </main>
+        <footer>
+            <p class="inspirational-quote">"Pequenas ações, grandes mudanças."</p>
+            <p class="copyright">&copy; 2025 Checklist Verde. Todos os direitos reservados.</p>
+        </footer>
+    </div>
     <script type="module" src="scripts/app.js"></script>
 </body>
 </html>

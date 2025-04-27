@@ -1,1 +1,198 @@
-/* Estilos da tela principal */
+.container {
+    background: url(../assets/images/clipboard-checklist-xp.png) no-repeat ;
+    background-position: 95% 12rem;
+    background-size: 40%;
+    background-size: clamp(10rem, 40%, 30rem);
+    background-color: #3b3b2517;
+
+    & header {
+        & nav {
+            & .logo {
+                & .logo-symbol {
+                    --size: 3rem;
+                    width: var(--size);
+                    height: calc(var(--size) - .31rem);
+                    flex-shrink: 0;
+                    /* outline: 1px solid red; */
+    
+                    & img {
+                        width: 100%;
+                        scale: 1.69;
+                        transform: translate(2.3%, -3.2%);
+                    }
+                }
+    
+                & span {
+                    font: var(--logo-text);
+                    color: rgb(40, 111, 80);
+                }
+            }
+
+            & a {
+                padding: .25rem 1rem;
+                background-color: lightgrey;
+                border-radius: 999px;
+                font: var(--paragraph);
+            }
+        }
+    
+        & .hero {
+            margin-block: 2rem;
+
+            & h1 {
+                width: 60%;
+                font: var(--title-md);
+                color: rgb(25, 50, 30);
+            }
+    
+            & p {
+                width: 60%;
+                margin-block: 1rem;
+                font: var(--text-sm);
+            }
+    
+            & a {
+                display: inline-block;
+                padding: .5rem 1.5rem;
+                background-color: rgb(0, 111, 0);
+                border-radius: 999px;
+                font: var(--paragraph);
+                color: white;
+            }
+        }
+    }
+    
+    & main {
+        & .feature {
+            background-color: lightgrey;
+            border-radius: 1rem;
+            padding: 1rem;
+            width: 20rem;
+            
+            & .icon {
+                width: 4rem;
+                height: 4rem;
+                padding: .5rem;
+                flex-shrink: 0;
+    
+                & img {
+                    width: 100%;
+                }
+            }
+    
+            & .text {
+                width: 100%;
+    
+                & h2 {
+                    width: 100%;
+                    font: var(--title-sm);
+                }
+
+                & p {
+                    width: 100%;
+                    height: 100%;
+                    font: var(--text-sm);
+                }
+            }
+    
+            &.checklist-feature {
+                & .icon {
+                    background-color: rgb(0, 111, 0);
+                    border-radius: 20%;
+    
+                    & img {
+                        transform: translateY(3%);
+                    }
+                }
+            }
+    
+            &.score-feature {
+                & .icon {
+                    background-color: rgb(0, 111, 0);
+                    border-radius: 50%;
+                    font: var(--xp);
+
+                    & span {
+                        font-weight: 400;
+                        color: white;
+                    }
+                }
+            }
+    
+            &.tips-feature {
+                & .icon {
+                    & img {
+                        scale: 1.35;
+                    }
+                }
+            }
+        }
+    }
+
+    & footer {
+        & p {
+            text-align: center;
+            margin-block: 1rem;
+        }
+    }
+
+    @media (width >= 45em) {
+        padding: 2rem;
+        background-position: 85% 6rem;
+
+        & header {
+            & nav {
+                & .logo {
+                    gap: 1rem;
+
+                    & .logo-symbol {
+                        --size: 5rem;
+                    }
+
+                    & span {
+                        font-size: 3rem;
+                        font-weight: 700;
+                    }
+                }
+
+                & a {
+                    font-size: 1.15rem;
+                    padding: .7rem 1.7rem;
+                    font-weight: 400;
+                }
+            }
+
+            & .hero {
+                & h1 {
+                    font-size: 2.5rem;
+                    width: 57%;
+                }
+
+                & p {
+                    font-size: 1.25rem;
+                    margin-block: 1.25rem 2rem;
+                }
+
+                & a {
+                    font-size: 1.15rem;
+                    padding: .7rem 1.7rem;
+                }
+            }
+        }
+
+        & main {
+            gap: .7rem;
+
+            & {
+                & .feature {
+                    gap: 1rem;
+                    width: clamp(1rem, 50%, 43rem);
+                    
+                    & h2 {
+                        font-size: 1.5rem !important;
+                    }
+                }
+            }
+        }
+    }
+}
