@@ -1,8 +1,8 @@
 .container {
-    margin: 1rem;
     padding: 1rem;
-    border-radius: 1rem;
-    border: 1px solid gray;
+    min-width: 19rem;
+    min-width: 100%;
+    min-height: 100%;
 }
 
 .flex {
