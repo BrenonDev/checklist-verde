@@ -24,7 +24,7 @@
         background-image: url(../assets/images/clipboard-checklist-xp.png);
         background-repeat: no-repeat;
         background-position-x: 95%;
-        background-position-y: 18rem;
+        background-position-y: 13rem;
         background-size: 37%;
         opacity: 0.8;
         pointer-events: none;
@@ -176,43 +176,43 @@
 
     @media (width >= 23em) { 
         &::after {
-            background-position-y: 14rem;
+            background-position-y: 12rem;
         }
     }
     
     @media (width >= 24em) {
         &::after {
-            background-position-y: 13rem;
+            background-position-y: 11rem;
         }
     }
     
     @media (width >= 25em) {
         &::after {
-            background-position-y: 12rem;
+            background-position-y: 10rem;
         }
     }
     
     @media (width >= 26em) {
         &::after {
-            background-position-y: 11rem;
+            background-position-y: 9rem;
         }
     }
     
     @media (width >= 27em) {
         &::after {
-            background-position-y: 10rem;
+            background-position-y: 8rem;
         }
     }
     
     @media (width >= 28em) {
         &::after {
-            background-position-y: 9rem;
+            background-position-y: 7rem;
         }
     }
     
     @media (width >= 29em) {
         &::after {
-            background-position-y: 8rem;
+            background-position-y: 7rem;
         }
     }
     
@@ -282,21 +282,21 @@
     
     @media (width >= 40em) {
         &::after {
-            background-position-y: 4rem;
+            background-position-y: 3rem;
             background-size: 32%;
         }
     }
     
     @media (width >= 41em) {
         &::after {
-            background-position-y: 4rem;
+            background-position-y: 3rem;
             background-size: 31%;
         }
     }
     
     @media (width >= 42em) {
         &::after {
-            background-position-y: 4rem;
+            background-position-y: 3rem;
             background-size: 30%;
             background-position-x: 94%;
         }
@@ -304,7 +304,7 @@
     
     @media (width >= 43em) {
         &::after {
-            background-position-y: 3.5rem;
+            background-position-y: 3rem;
             background-size: 29%;
             background-position-x: 93%;
         }
@@ -341,11 +341,9 @@
         }
     }
     
-    @media (width >= 50em) {
+    @media (width >= 48em) {
         &::after {
-            background-position-x: 92%;
-            background-position-y: 17rem;
-            background-size: 37%;
+            background-position-y: 2.5rem;
         }
     }
 
