@@ -1,5 +1,4 @@
 .container {
-    background: linear-gradient(135deg, rgb(255, 255, 220), rgb(210, 240, 220));
     position: relative;
     overflow: hidden;
     z-index: 1;
@@ -23,111 +22,40 @@
         top: 0; left: 0; right: 0; bottom: 0;
         background-image: url(../assets/images/clipboard-checklist-xp.png);
         background-repeat: no-repeat;
-        background-position-x: 95%;
+        background-position-x: 90%;
         background-position-y: 13rem;
         background-size: 37%;
-        opacity: 0.8;
+        opacity: 0.85;
         pointer-events: none;
         z-index: 0;
-    }
-
-    & header {
-        & nav {
-            & .logo {
-                & .logo-symbol {
-                    --size: 3rem;
-                    width: var(--size);
-                    height: calc(var(--size) - .31rem);
-                    flex-shrink: 0;
-    
-                    & img {
-                        width: 100%;
-                        scale: 1.69;
-                        transform: translate(2.3%, -3.2%);
-                    }
-                }
-    
-                & span {
-                    font: var(--logo-text);
-                    color: #257755;
-                }
-            }
-
-            & a {
-                padding: .25rem 1rem;
-                background-color: #F0FAF4;
-                border: 1px solid #257755;
-                border-radius: 999px;
-                font: var(--paragraph);
-                filter: drop-shadow(.25rem .25rem .4rem rgba(0, 0, 0, 0.3));
-            }
-        }
-    
-        & .hero {
-            margin-block: 2rem;
-
-            & h1 {
-                width: 60%;
-                font: var(--title-md);
-                color: rgb(25, 50, 30);
-            }
-    
-            & p {
-                width: 60%;
-                margin-block: 1rem;
-                font: var(--text-sm);
-            }
-    
-            & a {
-                display: inline-block;
-                padding: .5rem 1.5rem;
-                background-color: #257755;
-                border-radius: 999px;
-                font: var(--paragraph);
-                color: white;
-                filter: drop-shadow(.25rem .25rem .4rem rgba(0, 0, 0, 0.5));
-            }
-        }
+        filter: drop-shadow(.3rem .3rem .25rem rgba(0, 0, 0, 0.3));
     }
     
     & main {
         margin-bottom: 4rem;
 
-        & .feature {
-            background-color: #F0FAF4;
-            border: 1px solid #257755;
-            border-radius: 1rem;
-            padding: 1rem;
-            width: clamp(17rem, 100%, 100%);
-            filter: drop-shadow(.25rem .25rem .4rem rgba(0, 0, 0, 0.3));
-            
-            & .icon {
-                width: 4rem;
-                height: 4rem;
-                padding: .5rem;
-                flex-shrink: 0;
+        & section.hero {
+            margin-block: 2rem;
     
-                & img {
-                    width: 100%;
-                }
+            & h1 {
+                width: 60%;
+                font: var(--title-md);
+                color: rgb(25, 50, 30);
+                filter: drop-shadow(.1rem .1rem .15rem rgba(0, 0, 0, 0.1));
             }
     
-            & .text {
-                width: 100%;
-    
-                & h2 {
-                    width: 100%;
-                    font: var(--title-sm);
-                }
+            & p {
+                width: 55%;
+                margin-block: 1rem;
+                font: var(--text-sm);
+                filter: drop-shadow(.1rem .1rem .15rem rgba(0, 0, 0, 0.1));
+            }
+        }
 
-                & p {
-                    width: 100%;
-                    height: 100%;
-                    font: var(--text-sm);
-                }
-            }
-    
-            &.checklist-feature {
+        & section.features {
+            width: clamp(17rem, 100%, 100%);
+
+            .card.checklist-feature {
                 & .icon {
                     background-color: #257755;
                     border-radius: 20%;
@@ -138,20 +66,19 @@
                 }
             }
     
-            &.score-feature {
+            .card.score-feature {
                 & .icon {
                     background-color: #257755;
                     border-radius: 50%;
                     font: var(--xp);
 
                     & span {
-                        font-weight: 400;
                         color: #F0FAF4;
                     }
                 }
             }
     
-            &.tips-feature {
+            .card.tips-feature {
                 & .icon {
                     & img {
                         scale: 1.35;
@@ -165,36 +92,81 @@
         & p {
             text-align: center;
             margin-block: 3rem 1rem;
+            filter: drop-shadow(.1rem .1rem .15rem rgba(0, 0, 0, 0.1));
 
             &:first-child {
-                font-size: 1.5rem;
+                font-size: 1rem;
                 font-weight: 600;
                 color: #257755;
             }
+
+            &:last-child {
+                font-size: .7rem;
+            }
+        }
+    }
+
+    @media (width >= 21em) { 
+        &::after {
+            background-position-y: 12.5rem;
+        }
+    }
+
+    @media (width >= 22em) { 
+        &::after {
+            background-position-y: 12rem;
         }
     }
 
     @media (width >= 23em) { 
         &::after {
-            background-position-y: 12rem;
+            background-position-y: 11rem;
+        }
+
+        & footer {
+            p:first-child {
+                font-size: 1.1rem;
+            }
         }
     }
     
     @media (width >= 24em) {
         &::after {
-            background-position-y: 11rem;
+            background-position-y: 10rem;
+        }
+
+        & footer {
+            p:first-child {
+                font-size: 1.15rem;
+            }
         }
     }
     
     @media (width >= 25em) {
         &::after {
-            background-position-y: 10rem;
+            background-position-y: 9rem;
+        }
+
+        & footer {
+            p:first-child {
+                font-size: 1.2rem;
+            }
+
+            & p:last-child {
+                font-size: .8rem;
+            }
         }
     }
     
     @media (width >= 26em) {
         &::after {
-            background-position-y: 9rem;
+            background-position-y: 8.5rem;
+        }
+
+        & footer {
+            p:first-child {
+                font-size: 1.25rem;
+            }
         }
     }
     
@@ -202,11 +174,23 @@
         &::after {
             background-position-y: 8rem;
         }
+
+        & footer {
+            p:first-child {
+                font-size: 1.3rem;
+            }
+        }
     }
     
     @media (width >= 28em) {
         &::after {
-            background-position-y: 7rem;
+            background-position-y: 7.5rem;
+        }
+
+        & footer {
+            p:first-child {
+                font-size: 1.35rem;
+            }
         }
     }
     
@@ -214,136 +198,160 @@
         &::after {
             background-position-y: 7rem;
         }
+
+        & footer {
+            p:first-child {
+                font-size: 1.4rem;
+            }
+        }
     }
     
     @media (width >= 30em) {
         &::after {
-            background-position-y: 7rem;
+            background-position-y: 6.5rem;
+        }
+
+        & footer {
+            p:first-child {
+                font-size: 1.45rem;
+            }
+
+            & p:last-child {
+                font-size: .9rem;
+            }
         }
     }
     
     @media (width >= 31em) {
         &::after {
-            background-position-y: 6.5rem;
+            background-position-y: 6rem;
+        }
+
+        & footer {
+            p:first-child {
+                font-size: 1.5rem;
+            }
         }
     }
     
     @media (width >= 32em) {
         &::after {
-            background-position-y: 6rem;
+            background-position-y: 5.5rem;
         }
     }
     
     @media (width >= 33em) {
         &::after {
-            background-position-y: 5.5rem;
+            background-position-y: 5rem;
         }
     }
     
     @media (width >= 34em) {
         &::after {
-            background-position-y: 5rem;
+            background-position-y: 4.5rem;
         }
     }
     
     @media (width >= 35em) {
         &::after {
-            background-position-y: 4.5rem;
+            background-position-y: 4rem;
         }
     }
     
     @media (width >= 36em) {
         &::after {
-            background-position-y: 4rem;
+            background-position-y: 3.75rem;
             background-size: 36%;
         }
     }
     
     @media (width >= 37em) {
         &::after {
-            background-position-y: 4rem;
+            background-position-y: 3.5rem;
             background-size: 35%;
         }
     }
     
     @media (width >= 38em) {
         &::after {
-            background-position-y: 4rem;
-            background-size: 34%;
-        }
-    }
-    
-    @media (width >= 39em) {
-        &::after {
-            background-position-y: 4rem;
+            background-position-y: 3.25rem;
             background-size: 33%;
         }
     }
     
-    @media (width >= 40em) {
-        &::after {
-            background-position-y: 3rem;
-            background-size: 32%;
-        }
-    }
-    
-    @media (width >= 41em) {
+    @media (width >= 39em) {
         &::after {
             background-position-y: 3rem;
             background-size: 31%;
         }
     }
     
+    @media (width >= 40em) {
+        &::after {
+            background-size: 30%;
+        }
+    }
+    
+    @media (width >= 41em) {
+        &::after {
+            background-size: 29%;
+        }
+    }
+    
     @media (width >= 42em) {
         &::after {
-            background-position-y: 3rem;
-            background-size: 30%;
-            background-position-x: 94%;
+            background-size: 28%;
         }
     }
     
     @media (width >= 43em) {
         &::after {
-            background-position-y: 3rem;
-            background-size: 29%;
-            background-position-x: 93%;
+            background-size: 27%;
         }
     }
     
     @media (width >= 44em) {
         &::after {
-            background-position-y: 3rem;
-            background-size: 28%;
-            background-position-x: 92%;
+            background-size: 26%;
         }
     }
     
     @media (width >= 45em) {
         &::after {
-            background-position-y: 3rem;
-            background-size: 27%;
-            background-position-x: 91%;
+            background-size: 25%;
         }
     }
     
     @media (width >= 46em) {
         &::after {
-            background-position-y: 3rem;
-            background-size: 26%;
-            background-position-x: 90%;
+            background-position-y: 2.5rem;
+            background-size: 24%;
+        }
+
+        & main {
+            & section.hero {
+                & p {
+                    width: 70%;
+                }
+            }
         }
     }
     
     @media (width >= 47em) {
         &::after {
-            background-position-y: 3rem;
-            background-position-x: 87%;
+            background-size: 23.75%;
         }
     }
     
     @media (width >= 48em) {
         &::after {
-            background-position-y: 2.5rem;
+            background-size: 23.5%;
+        }
+    }
+
+    @media (width >= 49em) {
+        &::after {
+            background-size: 23.25%;
         }
     }
 
@@ -357,28 +365,27 @@
         }
 
         & header {
-            & nav {
-                & .logo {
-                    gap: 1rem;
+            & .logo {
+                gap: 1rem;
 
-                    & .logo-symbol {
-                        --size: 5rem;
-                    }
-
-                    & span {
-                        font-size: 3rem;
-                        font-weight: 700;
-                    }
+                & .logo-symbol {
+                    --size: 5rem;
                 }
 
-                & a {
-                    font-size: 1.15rem;
-                    padding: .7rem 1.7rem;
-                    font-weight: 400;
+                & .logo-text {
+                    font-size: 3rem;
+                    font-weight: 700;
                 }
             }
 
-            & .hero {
+            & .button {
+                font-size: 1.15rem;
+                padding: .5rem 1.5rem;
+            }
+        }
+
+        & main {
+            & section.hero {
                 & h1 {
                     font-size: 2.5rem;
                     width: 100%;
@@ -387,34 +394,35 @@
                 & p {
                     font-size: 1.25rem;
                     margin-block: 1.25rem 2rem;
+                    width: 60%;
                 }
 
-                & a {
+                & .button {
                     font-size: 1.15rem;
                     padding: .7rem 1.7rem;
                 }
             }
-        }
 
-        & main {
-            gap: .7rem;
-
-            & .feature {
-                gap: 1rem;
-                width: clamp(17rem, 50%, 43rem);
+            & section.features {
+                gap: .7rem;
                 
-                & .text {
-                    & h2 {
-                        font-size: 1.5rem !important;
+                & .card {
+                    width: clamp(17rem, 50%, 43rem);
+                    gap: 1rem;
+                    
+                    & .text {
+                        & h2 {
+                            font-size: 1.5rem !important;
+                        }
                     }
                 }
             }
         }
     }
 
-    /* @media (width >= 51em) {
-        background-position-y: 18rem;
-    } */
+    @media (width >= 51em) {
+        background-position-y: 16.75rem;
+    }
 
     @media (width >= 52em) {
         &::after {
@@ -439,10 +447,34 @@
             background-position-y: 15rem;
         }
     }
+
+    @media (width >= 56em) {
+        &::after {
+            background-position-y: 14.5rem;
+        }
+    }
+
+    @media (width >= 57em) {
+        &::after {
+            background-position-y: 14rem;
+        }
+    }
+
+    @media (width >= 58em) {
+        &::after {
+            background-position-y: 13.5rem;
+        }
+    }
+
+    @media (width >= 59em) {
+        &::after {
+            background-position-y: 13rem;
+        }
+    }
     
     @media (width >= 60em) {
         &::after {
-            background-position-y: 13.5rem;
+            background-position-y: 12.5rem;
         }
     }
     
@@ -452,13 +484,13 @@
         }
     }
     
-    @media (width >= 72em) {
+    @media (width >= 70em) {
         &::after {
             background-position-x: 91.5%;
         }
     }
     
-    @media (width >= 74em) {
+    @media (width >= 72.5em) {
         &::after {
             background-position-x: 91%;
             background-position-y: 10rem;
@@ -480,7 +512,6 @@
     
     @media (width >= 77em) {
         &::after {
-            background-position-x: 90%;
             background-position-y: 9rem;
             background-size: 27rem;
         }
@@ -500,7 +531,6 @@
     
     @media (width >= 80em) {
         &::after {
-            background-position-x: 89%;
             background-position-y: 8rem;
             background-size: 28rem;
         }
@@ -518,12 +548,6 @@
         }
     }
     
-    @media (width >= 83em) {
-        &::after {
-            background-position-x: 88%;
-        }
-    }
-    
     @media (width >= 84em) {
         &::after {
             background-position-x: 87.5%;
@@ -531,12 +555,6 @@
     }
     
     @media (width >= 85em) {
-        &::after {
-            background-position-x: 87%;
-        }
-    }
-    
-    @media (width >= 86em) {
         &::after {
             background-position-x: 87%;
         }
@@ -554,12 +572,6 @@
         }
     }
     
-    @media (width >= 89em) {
-        &::after {
-            background-position-x: 86%;
-        }
-    }
-    
     @media (width >= 90em) {
         &::after {
             background-position-x: 85.5%;
@@ -567,12 +579,6 @@
     }
     
     @media (width >= 91em) {
-        &::after {
-            background-position-x: 85%;
-        }
-    }
-    
-    @media (width >= 92em) {
         &::after {
             background-position-x: 85%;
         }
@@ -590,12 +596,6 @@
         }
     }
     
-    @media (width >= 95em) {
-        &::after {
-            background-position-x: 84%;
-        }
-    }
-    
     @media (width >= 96em) {
         &::after {
             background-position-x: 83.5%;
@@ -603,12 +603,6 @@
     }
     
     @media (width >= 97em) {
-        &::after {
-            background-position-x: 83%;
-        }
-    }
-    
-    @media (width >= 98em) {
         &::after {
             background-position-x: 83%;
         }
@@ -626,50 +620,50 @@
         }
 
         & header {
-            & nav {
-                & .logo {
-                    gap: 1rem;
+            & .logo {
+                gap: 1rem;
 
-                    & .logo-symbol {
-                        --size: 5.5rem;
-                    }
-
-                    & span {
-                        font-size: 3.5rem;
-                        font-weight: 700;
-                    }
+                & .logo-symbol {
+                    --size: 5.5rem;
                 }
 
-                & a {
-                    font-size: 1.15rem;
-                    font-weight: 400;
-                    padding: .7rem 1.7rem;
+                & .logo-text {
+                    font-size: 3.5rem;
+                    font-weight: 700;
                 }
             }
 
-            & .hero {
+            & .button {
+                font-size: 1.15rem;
+                font-weight: 400;
+                padding: .7rem 1.7rem;
+            }
+        }
+
+        & main {
+            & section.hero {
                 & h1 {
                     font-size: 3rem;
                     font-weight: 500;
                     width: 100%;
                 }
             }
-        }
 
-        & main {
-            & .feature {    
-                width: 51.5rem;
-
-                & .text {
-                    & h2 {
-                        font-size: 1.75rem !important;
-                        font-weight: 500 !important;
-                    }
+            & section.features {
+                & .card {    
+                    width: 51.5rem;
     
-                    & p {
-                        font-size: 1rem !important;
-                    }
-                } 
+                    & .text {
+                        & h2 {
+                            font-size: 1.75rem !important;
+                            font-weight: 500 !important;
+                        }
+        
+                        & p {
+                            font-size: 1rem !important;
+                        }
+                    } 
+                }
             }
         }
     }

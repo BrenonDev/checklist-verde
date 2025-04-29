@@ -16,11 +16,18 @@
     --text-sm: 400 .875rem var(--font-family-inter);
     --text-md: 400 1rem var(--font-family-inter);
     --text-lg: 400 1.5rem var(--font-family-inter);
+    --button-light: 400 1rem var(--font-family-inter);
+    --button-dark: 500 1rem var(--font-family-inter);
 }
 
 body {
     font: var(--text-md);
     min-width: 21rem;
+    background: linear-gradient(120deg, rgb(255, 255, 220), rgb(210, 240, 220));
+
+    @media (width >= 50em) {
+        background: linear-gradient(135deg, rgb(255, 255, 220), rgb(210, 240, 220));
+    }
 }
 
 a {
