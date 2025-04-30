@@ -1,6 +1,8 @@
 .container {
+    display: grid;
+    align-content: flex-start;
     padding: 1rem;
-    min-width: 100%;
+    width: 100%;
     min-height: 100vh;
 }
 
@@ -117,7 +119,7 @@
             & h2 {
                 color: var(--black);
             }
-
+            
             & p {
                 color: var(--black);
             }
