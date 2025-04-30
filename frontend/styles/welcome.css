@@ -28,27 +28,30 @@
         opacity: 0.85;
         pointer-events: none;
         z-index: 0;
-        filter: drop-shadow(.3rem .3rem .25rem rgba(0, 0, 0, 0.3));
+        filter: drop-shadow(.3rem .3rem .25rem var(--shadow-primary));
+    }
+
+    & header {
+        margin-bottom: 2rem;
     }
     
     & main {
-        margin-bottom: 4rem;
-
         & section.hero {
-            margin-block: 2rem;
+            margin-bottom: 2.2rem;
     
             & h1 {
                 width: 60%;
                 font: var(--title-md);
-                color: rgb(25, 50, 30);
-                filter: drop-shadow(.1rem .1rem .15rem rgba(0, 0, 0, 0.1));
+                line-height: 1.1;
+                color: var(--green-darker);
+                filter: drop-shadow(.1rem .1rem .15rem var(--shadow-secondary));
             }
     
             & p {
                 width: 55%;
-                margin-block: 1rem;
+                margin-block: .5rem 1.3rem;
                 font: var(--text-sm);
-                filter: drop-shadow(.1rem .1rem .15rem rgba(0, 0, 0, 0.1));
+                filter: drop-shadow(.1rem .1rem .15rem var(--shadow-secondary));
             }
         }
 
@@ -57,7 +60,7 @@
 
             .card.checklist-feature {
                 & .icon {
-                    background-color: #257755;
+                    background-color: var(--green);
                     border-radius: 20%;
     
                     & img {
@@ -68,12 +71,12 @@
     
             .card.score-feature {
                 & .icon {
-                    background-color: #257755;
+                    background-color: var(--green);
                     border-radius: 50%;
-                    font: var(--xp);
-
+                    
                     & span {
-                        color: #F0FAF4;
+                        font: var(--xp);
+                        color: var(--gray-lightest);
                     }
                 }
             }
@@ -89,20 +92,25 @@
     }
 
     & footer {
+        margin-top: 2.5rem;
+
         & p {
             text-align: center;
-            margin-block: 3rem 1rem;
-            filter: drop-shadow(.1rem .1rem .15rem rgba(0, 0, 0, 0.1));
+            filter: drop-shadow(.1rem .1rem .15rem var(--shadow-secondary));
 
             &:first-child {
                 font-size: 1rem;
                 font-weight: 600;
-                color: #257755;
+                color: var(--green);
             }
-
+            
             &:last-child {
                 font-size: .7rem;
             }
+        }
+        
+        & .signature {
+            margin-block: 2.5rem;
         }
     }
 
@@ -184,7 +192,7 @@
     
     @media (width >= 28em) {
         &::after {
-            background-position-y: 7.5rem;
+            background-position-y: 6rem;
         }
 
         & footer {
@@ -195,10 +203,6 @@
     }
     
     @media (width >= 29em) {
-        &::after {
-            background-position-y: 7rem;
-        }
-
         & footer {
             p:first-child {
                 font-size: 1.4rem;
@@ -207,10 +211,6 @@
     }
     
     @media (width >= 30em) {
-        &::after {
-            background-position-y: 6.5rem;
-        }
-
         & footer {
             p:first-child {
                 font-size: 1.45rem;
@@ -224,7 +224,7 @@
     
     @media (width >= 31em) {
         &::after {
-            background-position-y: 6rem;
+            background-position-y: 5.5rem;
         }
 
         & footer {
@@ -236,96 +236,93 @@
     
     @media (width >= 32em) {
         &::after {
-            background-position-y: 5.5rem;
+            background-position-y: 5rem;
         }
     }
     
     @media (width >= 33em) {
         &::after {
-            background-position-y: 5rem;
+            background-position-y: 4.5rem;
         }
     }
     
     @media (width >= 34em) {
         &::after {
-            background-position-y: 4.5rem;
+            background-position-y: 4rem;
         }
     }
     
     @media (width >= 35em) {
         &::after {
-            background-position-y: 4rem;
+            background-position-y: 3.75rem;
         }
     }
     
     @media (width >= 36em) {
         &::after {
-            background-position-y: 3.75rem;
+            background-position-y: 3.25rem;
             background-size: 36%;
         }
     }
     
     @media (width >= 37em) {
         &::after {
-            background-position-y: 3.5rem;
+            background-position-y: 3rem;
             background-size: 35%;
         }
     }
     
     @media (width >= 38em) {
         &::after {
-            background-position-y: 3.25rem;
             background-size: 33%;
         }
     }
     
     @media (width >= 39em) {
         &::after {
-            background-position-y: 3rem;
             background-size: 31%;
         }
     }
     
     @media (width >= 40em) {
         &::after {
-            background-size: 30%;
+            background-size: 28%;
         }
     }
     
     @media (width >= 41em) {
         &::after {
-            background-size: 29%;
+            background-size: 27%;
         }
     }
     
     @media (width >= 42em) {
         &::after {
-            background-size: 28%;
+            background-size: 26%;
         }
     }
     
     @media (width >= 43em) {
         &::after {
-            background-size: 27%;
+            background-size: 25%;
         }
     }
     
     @media (width >= 44em) {
         &::after {
-            background-size: 26%;
+            background-size: 24%;
         }
     }
     
     @media (width >= 45em) {
         &::after {
-            background-size: 25%;
+            background-size: 23%;
         }
     }
     
     @media (width >= 46em) {
         &::after {
             background-position-y: 2.5rem;
-            background-size: 24%;
         }
 
         & main {
@@ -334,24 +331,6 @@
                     width: 70%;
                 }
             }
-        }
-    }
-    
-    @media (width >= 47em) {
-        &::after {
-            background-size: 23.75%;
-        }
-    }
-    
-    @media (width >= 48em) {
-        &::after {
-            background-size: 23.5%;
-        }
-    }
-
-    @media (width >= 49em) {
-        &::after {
-            background-size: 23.25%;
         }
     }
 
@@ -408,11 +387,14 @@
                 
                 & .card {
                     width: clamp(17rem, 50%, 43rem);
-                    gap: 1rem;
                     
                     & .text {
                         & h2 {
                             font-size: 1.5rem !important;
+                        }
+
+                        & p {
+                            font-size: 1rem;
                         }
                     }
                 }
@@ -420,67 +402,21 @@
         }
     }
 
-    @media (width >= 51em) {
-        background-position-y: 16.75rem;
-    }
-
-    @media (width >= 52em) {
-        &::after {
-            background-position-y: 16.5rem;
-        }
-    }
-    
-    @media (width >= 53em) {
+    @media (width >= 55em) {
         &::after {
             background-position-y: 16rem;
         }
     }
     
-    @media (width >= 54em) {
-        &::after {
-            background-position-y: 15.5rem;
-        }
-    }
-    
-    @media (width >= 55em) {
-        &::after {
-            background-position-y: 15rem;
-        }
-    }
-
-    @media (width >= 56em) {
-        &::after {
-            background-position-y: 14.5rem;
-        }
-    }
-
-    @media (width >= 57em) {
-        &::after {
-            background-position-y: 14rem;
-        }
-    }
-
-    @media (width >= 58em) {
-        &::after {
-            background-position-y: 13.5rem;
-        }
-    }
-
-    @media (width >= 59em) {
-        &::after {
-            background-position-y: 13rem;
-        }
-    }
-    
     @media (width >= 60em) {
         &::after {
-            background-position-y: 12.5rem;
+            background-position-y: 15rem;
         }
     }
     
     @media (width >= 64em) {
         &::after {
-            background-size: 25rem;
+            background-size: 22rem;
         }
     }
     
@@ -494,7 +430,7 @@
         &::after {
             background-position-x: 91%;
             background-position-y: 10rem;
-            background-size: 26rem;
+            background-size: 23rem;
         }
     }
     
@@ -513,7 +449,7 @@
     @media (width >= 77em) {
         &::after {
             background-position-y: 9rem;
-            background-size: 27rem;
+            background-size: 24rem;
         }
     }
     
@@ -532,7 +468,7 @@
     @media (width >= 80em) {
         &::after {
             background-position-y: 8rem;
-            background-size: 28rem;
+            background-size: 25rem;
         }
     }
     
@@ -616,7 +552,7 @@
 
     @media (width >= 100em) {
         &::after {
-            background-position-x: 82%;
+            background-position-x: 85%;
         }
 
         & header {
@@ -632,12 +568,6 @@
                     font-weight: 700;
                 }
             }
-
-            & .button {
-                font-size: 1.15rem;
-                font-weight: 400;
-                padding: .7rem 1.7rem;
-            }
         }
 
         & main {
@@ -652,19 +582,121 @@
             & section.features {
                 & .card {    
                     width: 51.5rem;
+
+                    & .icon {
+                        width: 4rem;
+                        height: 4rem;
+
+                        & span {
+                            font: var(--xp);
+                            font-size: 1.9rem !important;
+                            color: var(--light-gray);
+                        }
+                    }
     
                     & .text {
                         & h2 {
                             font-size: 1.75rem !important;
                             font-weight: 500 !important;
                         }
-        
-                        & p {
-                            font-size: 1rem !important;
-                        }
                     } 
                 }
             }
+        }
+    }
+
+    @media (width >= 105em) {
+        &::after {
+            background-position-x: 84%;
+            background-size: 26rem;
+        }
+    }
+
+    @media (width >= 107em) {
+        &::after {
+            background-position-x: 83%;
+            background-size: 27rem;
+        }
+    }
+
+    @media (width >= 109em) {
+        &::after {
+            background-position-x: 82%;
+            background-size: 28rem;
+        }
+    }
+    
+    @media (width >= 115em) {
+        &::after {
+            background-position-x: 81%;
+            background-size: 29rem;
+        }
+    }
+
+    @media (width >= 120em) {
+        &::after {
+            background-position-x: 79%;
+            background-size: 30rem;
+        }
+    }
+
+    @media (width >= 125em) {
+        &::after {
+            background-position-x: 78%;
+        }
+    }
+
+    @media (width >= 130em) {
+        &::after {
+            background-position-x: 77%;
+        }
+    }
+
+    @media (width >= 135em) {
+        &::after {
+            background-position-x: 76%;
+        }
+    }
+
+    @media (width >= 140em) {
+        &::after {
+            background-position-x: 75%;
+        }
+    }
+
+    @media (width >= 145em) {
+        &::after {
+            background-position-x: 74%;
+        }
+    }
+
+    @media (width >= 150em) {
+        &::after {
+            background-position-x: 73%;
+        }
+    }
+
+    @media (width >= 155em) {
+        &::after {
+            background-position-x: 72%;
+        }
+    }
+
+    @media (width >= 160em) {
+        &::after {
+            background-position-x: 71%;
+        }
+    }
+
+    @media (width >= 165em) {
+        &::after {
+            background-position-x: 70%;
+        }
+    }
+
+    @media (width >= 170em) {
+        &::after {
+            background-position-x: 69%;
         }
     }
 }

@@ -55,65 +55,78 @@
             width: 100%;
             scale: 1.69;
             transform: translate(2.3%, -3.2%);
-            filter: drop-shadow(.1rem .1rem .15rem rgba(0, 0, 0, 0.3));
+            filter: drop-shadow(.05rem .05rem .15rem var(--shadow-primary));
         }
     }
 
     & span {
         font: var(--logo-text);
-        color: #257755;
-        filter: drop-shadow(.15rem .15rem .2rem rgba(0, 0, 0, 0.3));
+        color: var(--green);
+        filter: drop-shadow(.1rem .1rem .2rem var(--shadow-primary));
     }
 }
 
 .button-light {
     display: inline-block;
     padding: .3rem 1.2rem;
-    background-color: #F0FAF4;
-    border: 1px solid #257755;
+    background-color: var(--gray-lightest);
+    border: 1px solid var(--green-light);
     border-radius: 999px;
     font: var(--button-light);
-    filter: drop-shadow(.15rem .15rem .25rem rgba(0, 0, 0, 0.3));
-    transition: background-color 100ms ease-in, filter 100ms ease-in;
+    color: var(--gray-dark);
+    filter: drop-shadow(.15rem .15rem .25rem var(--shadow-primary));
+    transition: background-color 100ms ease-in, color 100ms ease-in, filter 100ms ease-in;
 
     &:hover {
-        background-color: #E6EEE9;
-        filter: drop-shadow(.1rem .1rem .2rem rgba(0, 0, 0, 0.3));
+        background-color: var(--gray-light);
+        color: var(--black);
+        filter: drop-shadow(.1rem .1rem .2rem var(--shadow-primary));
     }
 }
 
 .button-dark {
     display: inline-block;
     padding: .5rem 1.5rem;
-    background-color: #257755;
+    background-color: var(--green);
     border-radius: 999px;
     font: var(--button-dark);
-    color: #F0FAF4;
-    filter: drop-shadow(.15rem .15rem .25rem rgba(0, 0, 0, 0.3));
-    transition: background-color 100ms ease-in, filter 100ms ease-in;
+    color: var(--gray-lightest);
+    filter: drop-shadow(.15rem .15rem .25rem var(--shadow-primary));
+    transition: background-color 100ms ease-in, color 100ms ease-in, filter 100ms ease-in;
 
     &:hover {
-        background-color: #3a8a69;
-        filter: drop-shadow(.1rem .1rem .2rem rgba(0, 0, 0, 0.3));
+        background-color: var(--green-dark);
+        color: var(--white);
+        filter: drop-shadow(.1rem .1rem .2rem var(--shadow-primary));
     }
 }
 
 .card {
     padding: 1rem;
-    background-color: #F0FAF4;
-    border: 1px solid #257755;
+    background-color: var(--gray-lightest);
+    border: 1px solid var(--green-light);
     border-radius: 1rem;
-    filter: drop-shadow(.15rem .15rem .25rem rgba(0, 0, 0, 0.3));
+    filter: drop-shadow(.15rem .15rem .25rem var(--shadow-primary));
     transition: background-color 100ms ease-in, filter 100ms ease-in;
 
     &:hover {
-        background-color: #E6EEE9;
-        filter: drop-shadow(.1rem .1rem .2rem rgba(0, 0, 0, 0.3));
+        background-color: var(--gray-light);
+        filter: drop-shadow(.1rem .1rem .2rem var(--shadow-primary));
+
+        & .text {
+            & h2 {
+                color: var(--black);
+            }
+
+            & p {
+                color: var(--black);
+            }
+        }
     }
     
     & .icon {
-        width: 4rem;
-        height: 4rem;
+        width: 3.5rem;
+        height: 3.5rem;
         padding: .5rem;
         flex-shrink: 0;
 
@@ -128,13 +141,45 @@
         & h2 {
             width: 100%;
             font: var(--title-sm);
+            color: var(--green-darker);
         }
 
         & p {
             width: 100%;
-            height: 100%;
             font: var(--text-sm);
+            color: var(--gray-darker);
         }
     }
 
+    @media (width >= 50em) {
+        
+    }
+}
+
+.signature {
+    display: block;
+    text-align: center;
+    
+    & a {
+        display: inline-block;
+        font: var(--signature);
+        color: var(--gray-dark);
+        background: var(--gray-lightest);
+        border: 1px solid var(--green-light);
+        padding: .1875rem .4375rem .3125rem;
+        border-radius: .375rem;
+        filter: drop-shadow(.15rem .15rem .25rem var(--shadow-primary));
+        
+        &:hover {
+            background: var(--gray-light);
+            color: var(--black);
+            filter: drop-shadow(.1rem .1rem .2rem var(--shadow-primary));
+        }
+    }
+
+    @media (width >= 50em) {
+        & a {
+            font-size: 1rem;
+        }
+    }
 }

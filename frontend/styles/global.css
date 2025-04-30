@@ -5,32 +5,56 @@
 }
 
 :root {
+    --black: #000000;
+    --white: #FFFFFF;
+    --green-darker: #162516;
+    --green-dark: #1E5E43;
+    --green: #257755;
+    --green-light: #3A8A69;
+    --green-lightest: #7DAD69;
+    --gray-darker: #212121;
+    --gray-dark: #333333;
+    --gray: #696969;
+    --gray-light: #E6EEE9;
+    --gray-lightest: #F0FAF4;
+
+    --shadow-primary: rgba(0, 0, 0, 0.3);
+    --shadow-secondary: rgba(0, 0, 0, 0.1);
+
+    --gradient-yellow-start: #FFFFDC;
+    --gradient-green-end: #D2F0DC;
+
     --font-family-nunito: "Nunito", sans-serif;
     --font-family-roboto: "Roboto Condensed", sans-serif;
     --font-family-inter: "Inter", sans-serif;
+    --font-family-roboto-mono: "Roboto Mono", monospace;
+
     --logo-text: 700 1.5rem var(--font-family-nunito);
-    --xp: 400 2rem var(--font-family-nunito);
     --title-sm: 600 1.375rem var(--font-family-roboto);
-    --title-md: 600 2rem/1.1 var(--font-family-roboto);
+    --title-md: 600 2rem var(--font-family-roboto);
     --title-lg: 600 3rem var(--font-family-roboto);
     --text-sm: 400 .875rem var(--font-family-inter);
     --text-md: 400 1rem var(--font-family-inter);
     --text-lg: 400 1.5rem var(--font-family-inter);
     --button-light: 400 1rem var(--font-family-inter);
     --button-dark: 500 1rem var(--font-family-inter);
+    --xp: 400 1.7rem var(--font-family-nunito);
+    --signature: 400 .875rem var(--font-family-roboto-mono);
 }
 
 body {
     font: var(--text-md);
     min-width: 21rem;
-    background: linear-gradient(120deg, rgb(255, 255, 220), rgb(210, 240, 220));
-
-    @media (width >= 50em) {
-        background: linear-gradient(135deg, rgb(255, 255, 220), rgb(210, 240, 220));
-    }
+    background: linear-gradient(120deg, var(--gradient-yellow-start), var(--gradient-green-end));
 }
 
 a {
     text-decoration: none;
     color: inherit;
+}
+
+@media (width >= 50em) {
+    & body {
+        background: linear-gradient(135deg, var(--gradient-yellow-start), var(--gradient-green-end));
+    }
 }
