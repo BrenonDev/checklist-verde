@@ -4,6 +4,19 @@
     padding: 1rem;
     width: 100%;
     min-height: 100vh;
+
+    &::before {
+        content: "";
+        position: absolute;
+        top: 0; left: 0; right: 0; bottom: 0;
+        background-image: url(../assets/images/background-checklist-verde.png);
+        background-repeat: repeat;
+        background-size: 30rem;
+        background-position: 26rem 0;
+        opacity: 0.2;
+        pointer-events: none;
+        z-index: -1;
+    }
 }
 
 .flex {
@@ -111,6 +124,36 @@
     filter: drop-shadow(.15rem .15rem .25rem var(--shadow-primary));
     transition: background-color 100ms ease-in, filter 100ms ease-in;
 
+    
+    & .icon {
+        width: 3.5rem;
+        height: 3.5rem;
+        padding: .5rem;
+        flex-shrink: 0;
+        
+        & img {
+            width: 100%;
+        }
+    }
+    
+    & .text {
+        width: 100%;
+        
+        & h2 {
+            width: 100%;
+            font: var(--title-sm);
+            color: var(--green-darker);
+            transition: color 100ms ease-in;
+        }
+        
+        & p {
+            width: 100%;
+            font: var(--text-sm);
+            color: var(--gray-darker);
+            transition: color 100ms ease-in;
+        }
+    }
+
     &:hover {
         background-color: var(--gray-light);
         filter: drop-shadow(.1rem .1rem .2rem var(--shadow-primary));
@@ -124,37 +167,6 @@
                 color: var(--black);
             }
         }
-    }
-    
-    & .icon {
-        width: 3.5rem;
-        height: 3.5rem;
-        padding: .5rem;
-        flex-shrink: 0;
-
-        & img {
-            width: 100%;
-        }
-    }
-
-    & .text {
-        width: 100%;
-
-        & h2 {
-            width: 100%;
-            font: var(--title-sm);
-            color: var(--green-darker);
-        }
-
-        & p {
-            width: 100%;
-            font: var(--text-sm);
-            color: var(--gray-darker);
-        }
-    }
-
-    @media (width >= 50em) {
-        
     }
 }
 

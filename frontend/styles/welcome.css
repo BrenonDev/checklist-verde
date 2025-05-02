@@ -1,22 +1,9 @@
-.container {
+.welcome {
     position: relative;
     overflow: hidden;
     z-index: 1;
     grid-template-rows: auto auto 1fr auto;
     gap: 2rem;
-    
-    &::before {
-        content: "";
-        position: absolute;
-        top: 0; left: 0; right: 0; bottom: 0;
-        background-image: url(../assets/images/background-checklist-verde.png);
-        background-repeat: repeat;
-        background-size: 30rem;
-        background-position: 26rem 0;
-        opacity: 0.2;
-        pointer-events: none;
-        z-index: -1;
-    }
 
     &::after {
         content: "";
@@ -58,6 +45,12 @@
 
             & .card {
                 font-weight: 600;
+
+                & .text {
+                    & h2 {
+                        transition: font-weight 100ms ease-in;
+                    }
+                }
 
                 &:hover {
                     & .text {
