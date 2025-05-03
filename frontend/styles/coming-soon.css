@@ -5,11 +5,11 @@
     & .card {
         & .text {
             font-family: var(--font-family-roboto-mono) !important;
-            font-size: 3.2vw !important;
+            font-size: 2.69vw !important;
         }
     }
 
-    @media (width >= 30em) {
+    @media (width >= 35em) {
         & .card {
             & .text {
                 font-size: clamp(1rem, 1.5vw, 2rem) !important;
