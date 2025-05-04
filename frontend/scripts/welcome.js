@@ -1,1 +1,4 @@
-// Scripts da tela inicial
+export function init() {
+    console.log('welcome.js inicializado');
+    // Scripts da tela inicial
+  }

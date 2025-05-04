@@ -1,13 +1,58 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Checklist Verde - Login</title>
+    <title>Checklist Verde</title>
+
     <link rel="stylesheet" href="../styles/app.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap" rel="stylesheet">
 </head>
-<body>
-    <!-- Tela de login -->
-     <script type="module" src="../scripts/app.js"></script>
+<body class="login">
+    <div class="container">
+        <div class="floating-window">
+            <header class="flex space-between align-start gap-0.5">
+                <a href="../pages/welcome.html" class="logo flex align-center gap-0.5">
+                    <div class="logo-symbol">
+                        <img src="../assets/images/logo-checklist-verde-symbol.png" alt="Ícone de check">
+                    </div>
+                    <span class="logo-text">CHECKLIST VERDE</span>
+                </a>
+                <a href="../pages/signup.html" class="button button-light">Cadastrar</a>
+            </header>
+            <main>
+                <div class="screen flex flex-column gap-1.5">
+                    <form action="">
+                        <fieldset class="flex flex-column align-start gap-1.5">
+                            <legend>Entrar</legend>
+                            <label class="label">
+                                E-mail<br>
+                                <input class="input" type="email" name="email" id="email" required>
+                            </label>
+                            <label class="label">
+                                Senha<br>
+                                <input class="input" type="password" name="password" id="password" required>
+                            </label>
+                            <button class="button-dark" type="submit">Entrar</button>
+                        </fieldset>
+                    </form>
+                    <a href="../pages/coming-soon.html">Esqueceu a senha?</a>
+                </div>
+                <div class="image-1 disabled">
+                    <img src="" alt="">
+                </div>
+                <div class="image-2 disabled">
+                    <img src="" alt="">
+                </div>
+                <div class="image-3 disabled">
+                    <img src="" alt="">
+                </div>
+            </main>
+        </div>     
+    </div>
+    <script type="module" src="../scripts/app.js"></script>
 </body>
 </html>

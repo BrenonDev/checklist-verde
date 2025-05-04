@@ -13,11 +13,11 @@
 ---
 <br>
 
-<h2 align="center"> 🖼️ Preview </h2>
+<h2 align="center"> 🖼️ Prévia </h2>
 
 <p align="center">
   <img
-    src="frontend/assets/images/welcome-screen.png"
+    src="docs/preview/ui/welcome-screen.png"
     alt="Tela de boas-vindas do Checklist Verde"
     width="300"
   />
@@ -171,10 +171,11 @@ Essa estrutura modularizada facilita o entendimento e a expansão do projeto à 
 checklist-verde/
 ├── backend/                # API e lógica do servidor
 │   ├── config/             # Configurações
-│   ├── controllers/        # Controladores das rotas
-│   ├── routes/             # Rotas da API
-│   ├── services/           # Regras de negócio
-│   └── models/             # Modelos do banco
+│   ├── controller/        # Controladores das rotas
+│   ├── model/             # Modelos do banco
+│   ├── repository/             # 
+│   ├── service/           # Regras de negócio
+│   └── resources/
 ├── database/               # Estrutura do banco
 │   ├── diagram/            # Diagramas
 │   ├── migrations/         # Criação de tabelas

@@ -1,714 +1,716 @@
 .welcome {
-    position: relative;
-    overflow: hidden;
-    z-index: 1;
-    grid-template-rows: auto auto 1fr auto;
-    gap: 2rem;
-
-    &::after {
-        content: "";
-        position: absolute;
-        top: 0; left: 0; right: 0; bottom: 0;
-        background-image: url(../assets/images/clipboard-checklist-xp.png);
-        background-repeat: no-repeat;
-        background-position-x: 90%;
-        background-position-y: 13rem;
-        background-size: 37%;
-        opacity: 0.85;
-        pointer-events: none;
-        z-index: 0;
-        filter: drop-shadow(.3rem .3rem .25rem var(--shadow-primary));
-    }
+    & .container {
+        grid-template-rows: auto auto 1fr auto;
+        padding: 1rem;
+        gap: 2rem;
+        z-index: 1;
+        position: relative;
     
-    & main {
-        & section.hero {
-            margin-bottom: 2rem;
-    
-            & h1 {
-                width: 60%;
-                font: var(--title-md);
-                line-height: 1.1;
-                color: var(--green-darker);
-                filter: drop-shadow(.1rem .1rem .15rem var(--shadow-secondary));
-            }
-    
-            & p {
-                width: 55%;
-                margin-block: .5rem 1.3rem;
-                font: var(--text-sm);
-                filter: drop-shadow(.1rem .1rem .15rem var(--shadow-secondary));
-            }
-        }
-
-        & section.features {
-            width: clamp(17rem, 100%, 100%);
-
-            & .card {
-                font-weight: 600;
-
-                & .text {
-                    & h2 {
-                        transition: font-weight 100ms ease-in;
-                    }
-                }
-
-                &:hover {
-                    & .text {
-                        & h2 {
-                            font-weight: 800;
-                        }
-                    }
-                }
-            }
-
-            .card.checklist-feature {
-                & .icon {
-                    background-color: var(--green);
-                    border-radius: 20%;
-    
-                    & img {
-                        transform: translateY(3%);
-                    }
-                }
-            }
-    
-            .card.score-feature {
-                & .icon {
-                    background-color: var(--green);
-                    border-radius: 50%;
-                    
-                    & span {
-                        font: var(--xp);
-                        color: var(--gray-lightest);
-                    }
-                }
-            }
-    
-            .card.tips-feature {
-                & .icon {
-                    & img {
-                        scale: 1.35;
-                    }
-                }
-            }
-        }
-    }
-
-    & footer {
-        margin-top: .5rem;
-        align-self: flex-end;
-
-        & p {
-            text-align: center;
-            filter: drop-shadow(.1rem .1rem .15rem var(--shadow-secondary));
-
-            &:first-child {
-                font-size: 1rem;
-                font-weight: 600;
-                color: var(--green);
-            }
-            
-            &:last-child {
-                font-size: .7rem;
-            }
+        &::after {
+            content: "";
+            position: absolute;
+            top: 0; left: 0; right: 0; bottom: 0;
+            background-image: url(../assets/images/clipboard-checklist-xp.png);
+            background-repeat: no-repeat;
+            background-position-x: 90%;
+            background-position-y: 13rem;
+            background-size: 37%;
+            opacity: 0.85;
+            pointer-events: none;
+            z-index: 0;
+            filter: drop-shadow(.3rem .3rem .25rem var(--shadow-primary));
         }
         
-        & .signature {
-            margin-block: 2.5rem;
-        }
-    }
-
-    @media (width >= 21em) { 
-        &::after {
-            background-position-y: 12.5rem;
-        }
-    }
-
-    @media (width >= 22em) { 
-        &::after {
-            background-position-y: 12rem;
-        }
-    }
-
-    @media (width >= 23em) { 
-        &::after {
-            background-position-y: 11rem;
-        }
-
-        & footer {
-            p:first-child {
-                font-size: 1.1rem;
-            }
-        }
-    }
-    
-    @media (width >= 24em) {
-        &::after {
-            background-position-y: 10rem;
-        }
-
-        & footer {
-            p:first-child {
-                font-size: 1.15rem;
-            }
-        }
-    }
-    
-    @media (width >= 25em) {
-        &::after {
-            background-position-y: 9rem;
-        }
-
-        & footer {
-            p:first-child {
-                font-size: 1.2rem;
-            }
-
-            & p:last-child {
-                font-size: .8rem;
-            }
-        }
-    }
-    
-    @media (width >= 26em) {
-        &::after {
-            background-position-y: 8.5rem;
-        }
-
-        & footer {
-            p:first-child {
-                font-size: 1.25rem;
-            }
-        }
-    }
-    
-    @media (width >= 27em) {
-        &::after {
-            background-position-y: 8rem;
-        }
-
-        & footer {
-            p:first-child {
-                font-size: 1.3rem;
-            }
-        }
-    }
-    
-    @media (width >= 28em) {
-        &::after {
-            background-position-y: 6rem;
-        }
-
-        & footer {
-            p:first-child {
-                font-size: 1.35rem;
-            }
-        }
-    }
-    
-    @media (width >= 29em) {
-        & footer {
-            p:first-child {
-                font-size: 1.4rem;
-            }
-        }
-    }
-    
-    @media (width >= 30em) {
-        & footer {
-            p:first-child {
-                font-size: 1.45rem;
-            }
-
-            & p:last-child {
-                font-size: .9rem;
-            }
-        }
-    }
-    
-    @media (width >= 31em) {
-        &::after {
-            background-position-y: 5.5rem;
-        }
-
-        & footer {
-            p:first-child {
-                font-size: 1.5rem;
-            }
-        }
-    }
-    
-    @media (width >= 32em) {
-        &::after {
-            background-position-y: 5rem;
-        }
-    }
-    
-    @media (width >= 33em) {
-        &::after {
-            background-position-y: 4.5rem;
-        }
-    }
-    
-    @media (width >= 34em) {
-        &::after {
-            background-position-y: 4rem;
-        }
-    }
-    
-    @media (width >= 35em) {
-        &::after {
-            background-position-y: 3.75rem;
-        }
-    }
-    
-    @media (width >= 36em) {
-        &::after {
-            background-position-y: 3.25rem;
-            background-size: 36%;
-        }
-    }
-    
-    @media (width >= 37em) {
-        &::after {
-            background-position-y: 3rem;
-            background-size: 35%;
-        }
-    }
-    
-    @media (width >= 38em) {
-        &::after {
-            background-size: 33%;
-        }
-    }
-    
-    @media (width >= 39em) {
-        &::after {
-            background-size: 31%;
-        }
-    }
-    
-    @media (width >= 40em) {
-        &::after {
-            background-size: 28%;
-        }
-    }
-    
-    @media (width >= 41em) {
-        &::after {
-            background-size: 27%;
-        }
-    }
-    
-    @media (width >= 42em) {
-        &::after {
-            background-size: 26%;
-        }
-    }
-    
-    @media (width >= 43em) {
-        &::after {
-            background-size: 25%;
-        }
-    }
-    
-    @media (width >= 44em) {
-        &::after {
-            background-size: 24%;
-        }
-    }
-    
-    @media (width >= 45em) {
-        &::after {
-            background-size: 23%;
-        }
-    }
-    
-    @media (width >= 46em) {
-        &::after {
-            background-position-y: 2.5rem;
-        }
-
         & main {
             & section.hero {
-                & p {
-                    width: 70%;
-                }
-            }
-        }
-    }
-
-    @media (width >= 50em) {
-        padding: 2rem;
-
-        &::after {
-            background-position-x: 92%;
-            background-position-y: 17rem;
-            background-size: 37%;
-        }
-
-        & header {
-            & .logo {
-                gap: 1rem;
-
-                & .logo-symbol {
-                    --size: 5rem;
-                }
-
-                & .logo-text {
-                    font-size: 3rem;
-                    font-weight: 700;
-                }
-            }
-
-            & .button {
-                font-size: 1.15rem;
-                padding: .5rem 1.5rem;
-            }
-        }
-
-        & main {
-            & section.hero {
+                margin-bottom: 2rem;
+        
                 & h1 {
-                    font-size: 2.5rem;
-                    width: 100%;
-                }
-
-                & p {
-                    font-size: 1.25rem;
-                    margin-block: 1.25rem 2rem;
                     width: 60%;
+                    font: var(--title-md);
+                    line-height: 1.1;
+                    color: var(--green-darker);
+                    filter: drop-shadow(.1rem .1rem .15rem var(--shadow-secondary));
                 }
-
-                & .button {
-                    font-size: 1.15rem;
-                    padding: .7rem 1.7rem;
+        
+                & p {
+                    width: 55%;
+                    margin-block: .5rem 1.3rem;
+                    font: var(--text-sm);
+                    filter: drop-shadow(.1rem .1rem .15rem var(--shadow-secondary));
                 }
             }
-
+    
             & section.features {
-                gap: .7rem;
-                
+                width: clamp(17rem, 100%, 100%);
+    
                 & .card {
-                    width: clamp(17rem, 50%, 43rem);
-                    
-                    & .text {
-                        & h2 {
-                            font-size: 1.5rem !important;
-                        }
-
-                        & p {
-                            font-size: 1rem;
-                        }
-                    }
-                }
-            }
-        }
-    }
-
-    @media (width >= 55em) {
-        &::after {
-            background-position-y: 16rem;
-        }
-    }
-    
-    @media (width >= 60em) {
-        &::after {
-            background-position-y: 15rem;
-        }
-    }
-    
-    @media (width >= 64em) {
-        &::after {
-            background-size: 22rem;
-        }
-    }
-    
-    @media (width >= 70em) {
-        &::after {
-            background-position-x: 91.5%;
-        }
-    }
-    
-    @media (width >= 72.5em) {
-        &::after {
-            background-position-x: 91%;
-            background-position-y: 10rem;
-            background-size: 23rem;
-        }
-    }
-    
-    @media (width >= 75em) {
-        &::after {
-            background-position-x: 90.5%;
-        }
-    }
-    
-    @media (width >= 76em) {
-        &::after {
-            background-position-x: 90%;
-        }
-    }
-    
-    @media (width >= 77em) {
-        &::after {
-            background-position-y: 9rem;
-            background-size: 24rem;
-        }
-    }
-    
-    @media (width >= 78em) {
-        &::after {
-            background-position-x: 89.5%;
-        }
-    }
-    
-    @media (width >= 79em) {
-        &::after {
-            background-position-x: 89%;
-        }
-    }
-    
-    @media (width >= 80em) {
-        &::after {
-            background-position-y: 8rem;
-            background-size: 25rem;
-        }
-    }
-    
-    @media (width >= 81em) {
-        &::after {
-            background-position-x: 88.5%;
-        }
-    }
-    
-    @media (width >= 82em) {
-        &::after {
-            background-position-x: 88%;
-        }
-    }
-    
-    @media (width >= 84em) {
-        &::after {
-            background-position-x: 87.5%;
-        }
-    }
-    
-    @media (width >= 85em) {
-        &::after {
-            background-position-x: 87%;
-        }
-    }
-    
-    @media (width >= 87em) {
-        &::after {
-            background-position-x: 86.5%;
-        }
-    }
-    
-    @media (width >= 88em) {
-        &::after {
-            background-position-x: 86%;
-        }
-    }
-    
-    @media (width >= 90em) {
-        &::after {
-            background-position-x: 85.5%;
-        }
-    }
-    
-    @media (width >= 91em) {
-        &::after {
-            background-position-x: 85%;
-        }
-    }
-    
-    @media (width >= 93em) {
-        &::after {
-            background-position-x: 84.5%;
-        }
-    }
-    
-    @media (width >= 94em) {
-        &::after {
-            background-position-x: 84%;
-        }
-    }
-    
-    @media (width >= 96em) {
-        &::after {
-            background-position-x: 83.5%;
-        }
-    }
-    
-    @media (width >= 97em) {
-        &::after {
-            background-position-x: 83%;
-        }
-    }
-    
-    @media (width >= 99em) {
-        &::after {
-            background-position-x: 82.5%;
-        }
-    }
-
-    @media (width >= 100em) {
-        &::after {
-            background-position-x: 85%;
-        }
-
-        & header {
-            & .logo {
-                gap: 1rem;
-
-                & .logo-symbol {
-                    --size: 5.5rem;
-                }
-
-                & .logo-text {
-                    font-size: 3.5rem;
-                    font-weight: 700;
-                }
-            }
-        }
-
-        & main {
-            & section.hero {
-                & h1 {
-                    font-size: 3rem;
-                    font-weight: 500;
-                    width: 100%;
-                }
-            }
-
-            & section.features {
-                & .card {    
-                    width: 51.5rem;
-
-                    & .icon {
-                        width: 4rem;
-                        height: 4rem;
-
-                        & span {
-                            font: var(--xp);
-                            font-size: 1.9rem !important;
-                            color: var(--light-gray);
-                        }
-                    }
+                    font-weight: 600;
     
                     & .text {
                         & h2 {
-                            font-size: 1.75rem !important;
-                            font-weight: 500;
+                            transition: font-weight 100ms ease-in;
                         }
-                    } 
-
+                    }
+    
                     &:hover {
                         & .text {
                             & h2 {
-                                font-weight: 700;
+                                font-weight: 800;
+                            }
+                        }
+                    }
+                }
+    
+                .card.checklist-feature {
+                    & .icon {
+                        background-color: var(--green);
+                        border-radius: 20%;
+        
+                        & img {
+                            transform: translateY(3%);
+                        }
+                    }
+                }
+        
+                .card.score-feature {
+                    & .icon {
+                        background-color: var(--green);
+                        border-radius: 50%;
+                        
+                        & span {
+                            font: var(--xp);
+                            color: var(--gray-lightest);
+                        }
+                    }
+                }
+        
+                .card.tips-feature {
+                    & .icon {
+                        & img {
+                            scale: 1.35;
+                        }
+                    }
+                }
+            }
+        }
+    
+        & footer {
+            margin-top: .5rem;
+            align-self: flex-end;
+    
+            & p {
+                text-align: center;
+                filter: drop-shadow(.1rem .1rem .15rem var(--shadow-secondary));
+    
+                &:first-child {
+                    font-size: 1rem;
+                    font-weight: 600;
+                    color: var(--green);
+                }
+                
+                &:last-child {
+                    font-size: .7rem;
+                }
+            }
+            
+            & .signature {
+                margin-block: 2.5rem;
+            }
+        }
+    
+        @media (width >= 21em) { 
+            &::after {
+                background-position-y: 12.5rem;
+            }
+        }
+    
+        @media (width >= 22em) { 
+            &::after {
+                background-position-y: 12rem;
+            }
+        }
+    
+        @media (width >= 23em) { 
+            &::after {
+                background-position-y: 11rem;
+            }
+    
+            & footer {
+                p:first-child {
+                    font-size: 1.1rem;
+                }
+            }
+        }
+        
+        @media (width >= 24em) {
+            &::after {
+                background-position-y: 10rem;
+            }
+    
+            & footer {
+                p:first-child {
+                    font-size: 1.15rem;
+                }
+            }
+        }
+        
+        @media (width >= 25em) {
+            &::after {
+                background-position-y: 9rem;
+            }
+    
+            & footer {
+                p:first-child {
+                    font-size: 1.2rem;
+                }
+    
+                & p:last-child {
+                    font-size: .8rem;
+                }
+            }
+        }
+        
+        @media (width >= 26em) {
+            &::after {
+                background-position-y: 8.5rem;
+            }
+    
+            & footer {
+                p:first-child {
+                    font-size: 1.25rem;
+                }
+            }
+        }
+        
+        @media (width >= 27em) {
+            &::after {
+                background-position-y: 8rem;
+            }
+    
+            & footer {
+                p:first-child {
+                    font-size: 1.3rem;
+                }
+            }
+        }
+        
+        @media (width >= 28em) {
+            &::after {
+                background-position-y: 6rem;
+            }
+    
+            & footer {
+                p:first-child {
+                    font-size: 1.35rem;
+                }
+            }
+        }
+        
+        @media (width >= 29em) {
+            & footer {
+                p:first-child {
+                    font-size: 1.4rem;
+                }
+            }
+        }
+        
+        @media (width >= 30em) {
+            & footer {
+                p:first-child {
+                    font-size: 1.45rem;
+                }
+    
+                & p:last-child {
+                    font-size: .9rem;
+                }
+            }
+        }
+        
+        @media (width >= 31em) {
+            &::after {
+                background-position-y: 5.5rem;
+            }
+    
+            & footer {
+                p:first-child {
+                    font-size: 1.5rem;
+                }
+            }
+        }
+        
+        @media (width >= 32em) {
+            &::after {
+                background-position-y: 5rem;
+            }
+        }
+        
+        @media (width >= 33em) {
+            &::after {
+                background-position-y: 4.5rem;
+            }
+        }
+        
+        @media (width >= 34em) {
+            &::after {
+                background-position-y: 4rem;
+            }
+        }
+        
+        @media (width >= 35em) {
+            &::after {
+                background-position-y: 3.75rem;
+            }
+        }
+        
+        @media (width >= 36em) {
+            &::after {
+                background-position-y: 3.25rem;
+                background-size: 36%;
+            }
+        }
+        
+        @media (width >= 37em) {
+            &::after {
+                background-position-y: 3rem;
+                background-size: 35%;
+            }
+        }
+        
+        @media (width >= 38em) {
+            &::after {
+                background-size: 33%;
+            }
+        }
+        
+        @media (width >= 39em) {
+            &::after {
+                background-size: 31%;
+            }
+        }
+        
+        @media (width >= 40em) {
+            &::after {
+                background-size: 28%;
+            }
+        }
+        
+        @media (width >= 41em) {
+            &::after {
+                background-size: 27%;
+            }
+        }
+        
+        @media (width >= 42em) {
+            &::after {
+                background-size: 26%;
+            }
+        }
+        
+        @media (width >= 43em) {
+            &::after {
+                background-size: 25%;
+            }
+        }
+        
+        @media (width >= 44em) {
+            &::after {
+                background-size: 24%;
+            }
+        }
+        
+        @media (width >= 45em) {
+            &::after {
+                background-size: 23%;
+            }
+        }
+        
+        @media (width >= 46em) {
+            &::after {
+                background-position-y: 2.5rem;
+            }
+    
+            & main {
+                & section.hero {
+                    & p {
+                        width: 70%;
+                    }
+                }
+            }
+        }
+    
+        @media (width >= 50em) {
+            padding: 2rem;
+    
+            &::after {
+                background-position-x: 92%;
+                background-position-y: 17rem;
+                background-size: 37%;
+            }
+    
+            & header {
+                & .logo {
+                    gap: 1rem;
+    
+                    & .logo-symbol {
+                        --size: 5rem;
+                    }
+    
+                    & .logo-text {
+                        font-size: 3rem;
+                        font-weight: 700;
+                    }
+                }
+    
+                & .button {
+                    font-size: 1.15rem;
+                    padding: .5rem 1.5rem;
+                }
+            }
+    
+            & main {
+                & section.hero {
+                    & h1 {
+                        font-size: 2.5rem;
+                        width: 100%;
+                    }
+    
+                    & p {
+                        font-size: 1.25rem;
+                        margin-block: 1.25rem 2rem;
+                        width: 60%;
+                    }
+    
+                    & .button {
+                        font-size: 1.15rem;
+                        padding: .7rem 1.7rem;
+                    }
+                }
+    
+                & section.features {
+                    gap: .7rem;
+                    
+                    & .card {
+                        width: clamp(17rem, 50%, 43rem);
+                        
+                        & .text {
+                            & h2 {
+                                font-size: 1.5rem !important;
+                            }
+    
+                            & p {
+                                font-size: 1rem;
                             }
                         }
                     }
                 }
             }
         }
-    }
-
-    @media (width >= 105em) {
-        &::after {
-            background-position-x: 84%;
-            background-size: 26rem;
-        }
-    }
-
-    @media (width >= 107em) {
-        &::after {
-            background-position-x: 83%;
-            background-size: 27rem;
-        }
-    }
-
-    @media (width >= 109em) {
-        &::after {
-            background-position-x: 82%;
-            background-size: 28rem;
-        }
-    }
     
-    @media (width >= 115em) {
-        &::after {
-            background-position-x: 81%;
-            background-size: 29rem;
+        @media (width >= 55em) {
+            &::after {
+                background-position-y: 16rem;
+            }
         }
-    }
-
-    @media (width >= 120em) {
-        &::after {
-            background-position-x: 79%;
-            background-size: 30rem;
+        
+        @media (width >= 60em) {
+            &::after {
+                background-position-y: 15rem;
+            }
         }
-    }
-
-    @media (width >= 125em) {
-        &::after {
-            background-position-x: 78%;
+        
+        @media (width >= 64em) {
+            &::after {
+                background-size: 22rem;
+            }
         }
-    }
-
-    @media (width >= 130em) {
-        &::after {
-            background-position-x: 77%;
+        
+        @media (width >= 70em) {
+            &::after {
+                background-position-x: 91.5%;
+            }
         }
-    }
-
-    @media (width >= 135em) {
-        &::after {
-            background-position-x: 76%;
+        
+        @media (width >= 72.5em) {
+            &::after {
+                background-position-x: 91%;
+                background-position-y: 10rem;
+                background-size: 23rem;
+            }
         }
-    }
-
-    @media (width >= 140em) {
-        &::after {
-            background-position-x: 75%;
+        
+        @media (width >= 75em) {
+            &::after {
+                background-position-x: 90.5%;
+            }
         }
-    }
-
-    @media (width >= 145em) {
-        &::after {
-            background-position-x: 74%;
+        
+        @media (width >= 76em) {
+            &::after {
+                background-position-x: 90%;
+            }
         }
-    }
-
-    @media (width >= 150em) {
-        &::after {
-            background-position-x: 73%;
+        
+        @media (width >= 77em) {
+            &::after {
+                background-position-y: 9rem;
+                background-size: 24rem;
+            }
         }
-    }
-
-    @media (width >= 155em) {
-        &::after {
-            background-position-x: 72%;
+        
+        @media (width >= 78em) {
+            &::after {
+                background-position-x: 89.5%;
+            }
         }
-    }
-
-    @media (width >= 160em) {
-        &::after {
-            background-position-x: 71%;
+        
+        @media (width >= 79em) {
+            &::after {
+                background-position-x: 89%;
+            }
         }
-    }
-
-    @media (width >= 165em) {
-        &::after {
-            background-position-x: 70%;
+        
+        @media (width >= 80em) {
+            &::after {
+                background-position-y: 8rem;
+                background-size: 25rem;
+            }
         }
-    }
-
-    @media (width >= 170em) {
-        &::after {
-            background-position-x: 69%;
+        
+        @media (width >= 81em) {
+            &::after {
+                background-position-x: 88.5%;
+            }
+        }
+        
+        @media (width >= 82em) {
+            &::after {
+                background-position-x: 88%;
+            }
+        }
+        
+        @media (width >= 84em) {
+            &::after {
+                background-position-x: 87.5%;
+            }
+        }
+        
+        @media (width >= 85em) {
+            &::after {
+                background-position-x: 87%;
+            }
+        }
+        
+        @media (width >= 87em) {
+            &::after {
+                background-position-x: 86.5%;
+            }
+        }
+        
+        @media (width >= 88em) {
+            &::after {
+                background-position-x: 86%;
+            }
+        }
+        
+        @media (width >= 90em) {
+            &::after {
+                background-position-x: 85.5%;
+            }
+        }
+        
+        @media (width >= 91em) {
+            &::after {
+                background-position-x: 85%;
+            }
+        }
+        
+        @media (width >= 93em) {
+            &::after {
+                background-position-x: 84.5%;
+            }
+        }
+        
+        @media (width >= 94em) {
+            &::after {
+                background-position-x: 84%;
+            }
+        }
+        
+        @media (width >= 96em) {
+            &::after {
+                background-position-x: 83.5%;
+            }
+        }
+        
+        @media (width >= 97em) {
+            &::after {
+                background-position-x: 83%;
+            }
+        }
+        
+        @media (width >= 99em) {
+            &::after {
+                background-position-x: 82.5%;
+            }
+        }
+    
+        @media (width >= 100em) {
+            &::after {
+                background-position-x: 85%;
+            }
+    
+            & header {
+                & .logo {
+                    gap: 1rem;
+    
+                    & .logo-symbol {
+                        --size: 5.5rem;
+                    }
+    
+                    & .logo-text {
+                        font-size: 3.5rem;
+                        font-weight: 700;
+                    }
+                }
+            }
+    
+            & main {
+                & section.hero {
+                    & h1 {
+                        font-size: 3rem;
+                        font-weight: 500;
+                        width: 100%;
+                    }
+                }
+    
+                & section.features {
+                    & .card {    
+                        width: 51.5rem;
+    
+                        & .icon {
+                            width: 4rem;
+                            height: 4rem;
+    
+                            & span {
+                                font: var(--xp);
+                                font-size: 1.9rem !important;
+                                color: var(--light-gray);
+                            }
+                        }
+        
+                        & .text {
+                            & h2 {
+                                font-size: 1.75rem !important;
+                                font-weight: 500;
+                            }
+                        } 
+    
+                        &:hover {
+                            & .text {
+                                & h2 {
+                                    font-weight: 700;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    
+        @media (width >= 105em) {
+            &::after {
+                background-position-x: 84%;
+                background-size: 26rem;
+            }
+        }
+    
+        @media (width >= 107em) {
+            &::after {
+                background-position-x: 83%;
+                background-size: 27rem;
+            }
+        }
+    
+        @media (width >= 109em) {
+            &::after {
+                background-position-x: 82%;
+                background-size: 28rem;
+            }
+        }
+        
+        @media (width >= 115em) {
+            &::after {
+                background-position-x: 81%;
+                background-size: 29rem;
+            }
+        }
+    
+        @media (width >= 120em) {
+            &::after {
+                background-position-x: 79%;
+                background-size: 30rem;
+            }
+        }
+    
+        @media (width >= 125em) {
+            &::after {
+                background-position-x: 78%;
+            }
+        }
+    
+        @media (width >= 130em) {
+            &::after {
+                background-position-x: 77%;
+            }
+        }
+    
+        @media (width >= 135em) {
+            &::after {
+                background-position-x: 76%;
+            }
+        }
+    
+        @media (width >= 140em) {
+            &::after {
+                background-position-x: 75%;
+            }
+        }
+    
+        @media (width >= 145em) {
+            &::after {
+                background-position-x: 74%;
+            }
+        }
+    
+        @media (width >= 150em) {
+            &::after {
+                background-position-x: 73%;
+            }
+        }
+    
+        @media (width >= 155em) {
+            &::after {
+                background-position-x: 72%;
+            }
+        }
+    
+        @media (width >= 160em) {
+            &::after {
+                background-position-x: 71%;
+            }
+        }
+    
+        @media (width >= 165em) {
+            &::after {
+                background-position-x: 70%;
+            }
+        }
+    
+        @media (width >= 170em) {
+            &::after {
+                background-position-x: 69%;
+            }
         }
     }
 }
