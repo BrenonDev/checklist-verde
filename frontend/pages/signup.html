@@ -23,60 +23,51 @@
                 </a>
                 <a href="../pages/login.html" class="button button-light">Entrar</a>
             </header>
-            <main>
-                <div class="screen flex flex-column gap-1.5">
-                    <form action="">
-                        <fieldset class="flex flex-column align-start gap-1.5">
-                            <legend>Cadastrar</legend>
-                            <label class="label">
-                                Nome Completo<br>
-                                <input class="input" type="text" name="name" id="name" required>
-                            </label>
-                            <label class="label">
-                                Gênero<br>
-                                <select class="select" id="gender" name="gender" onchange="toggleOtherField()">
-                                    <option value="" disabled selected>Selecione...</option>
-                                    <option value="male">Masculino</option>
-                                    <option value="female">Feminino</option>
-                                    <option value="non-binary">Não-binário</option>
-                                    <option value="other">Outro</option>
-                                    <option value="prefer-not-to-say">Prefiro não dizer</option>
-                                </select>
-                            </label>
-                            <label class="label disabled" id="other-gender-label">
-                                Informar o Gênero<br>
-                                <input class="input" type="text" name="other-gender" id="other-gender" required disabled>
-                            </label>
-                            <label class="label">
-                                Data de Nascimento<br>
-                                <input class="input" type="date" name="birthdate" id="birth-date" required>
-                            </label>
-                            <label class="label">
-                                E-mail<br>
-                                <input class="input" type="email" name="email" id="email" required>
-                            </label>
-                            <label class="label">
-                                Senha<br>
-                                <input class="input" type="password" name="password" id="password" required>
-                            </label>
-                            <label class="label">
-                                Confirmar Senha<br>
-                                <input class="input" type="password" name="confirm-password" id="confirm-password" required>
-                            </label>
-                            <button class="button-dark" type="submit">Cadastrar</button>
-                        </fieldset>
-                    </form>
-                    <a href="../pages/login.html">Já tem uma conta? <span>Entrar</span></a>
-                </div>
-                <div class="image-1 disabled">
-                    <img src="" alt="">
-                </div>
-                <div class="image-2 disabled">
-                    <img src="" alt="">
-                </div>
-                <div class="image-3 disabled">
-                    <img src="" alt="">
-                </div>
+            <main class="flex flex-column gap-1.5">
+                <form action="">
+                    <fieldset class="flex flex-column align-start gap-1.5">
+                        <legend>Cadastrar</legend>
+                        <label class="label">
+                            Nome Completo<br>
+                            <input class="input" type="text" name="name" id="name" required>
+                        </label>
+                        <label class="label">
+                            Gênero<br>
+                            <select class="select" id="gender" name="gender" onchange="toggleOtherField()">
+                              <option value="" disabled selected>Selecione...</option>
+                              <option value="cis-male">Homem cisgênero</option>
+                              <option value="trans-male">Homem transgênero</option>
+                              <option value="cis-female">Mulher cisgênero</option>
+                              <option value="trans-female">Mulher transgênero</option>
+                              <option value="non-binary">Não binário</option>
+                              <option value="prefer-not-to-say">Prefiro não responder</option>
+                              <option value="other">Outro</option>
+                            </select>
+                          </label>
+                        <label class="label disabled" id="other-gender-label">
+                            Como você se identifica?<br>
+                            <input class="input" type="text" name="other-gender" id="other-gender" required disabled>
+                        </label>
+                        <label class="label">
+                            Data de Nascimento<br>
+                            <input class="input" type="date" name="birthdate" id="birth-date" required>
+                        </label>
+                        <label class="label">
+                            E-mail<br>
+                            <input class="input" type="email" name="email" id="email" required>
+                        </label>
+                        <label class="label">
+                            Senha<br>
+                            <input class="input" type="password" name="password" id="password" required>
+                        </label>
+                        <label class="label">
+                            Confirmar Senha<br>
+                            <input class="input" type="password" name="confirm-password" id="confirm-password" required>
+                        </label>
+                        <button class="button button-dark coming-soon" type="submit">Cadastrar</button>
+                    </fieldset>
+                </form>
+                <a href="../pages/login.html">Já tem uma conta? Entrar</a>
             </main>
         </div>     
     </div>

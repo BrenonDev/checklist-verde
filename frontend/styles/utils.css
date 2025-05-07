@@ -29,7 +29,7 @@
         border-radius: 1rem;
         box-shadow: 0 .1rem .7rem var(--shadow-primary);
         width: calc(100vw - 2rem);
-        height: calc(100vh - 2rem);
+        height: calc(100svh - 2rem);
 
         & header {
             grid-row: 1;
@@ -169,14 +169,6 @@
 
 .flex-column {
     flex-direction: column;
-}
-
-.align-start {
-    align-items: flex-start;
-}
-
-.align-end {
-    align-items: flex-end;
 }
 
 .disabled {
