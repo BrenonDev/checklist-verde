@@ -4,7 +4,6 @@
             & main {
                 width: max-content;
                 justify-self: center;
-                padding: 1rem;
                 background-color: var(--gray-lightest);
                 border: 1px solid var(--green-lightest);
                 border-radius: 1rem;

@@ -7,7 +7,80 @@
     <link rel="stylesheet" href="../styles/app.css">
 </head>
 <body class="dashboard">
-    <!-- Tela principal -->
+    <div class="container">
+        <div class="floating-window">
+            <header>
+                <div class="top-bar flex space-between align-start gap-0.5">
+                    <a href="../pages/welcome.html" class="logo flex align-center gap-0.5">
+                        <div class="logo-symbol">
+                            <img src="../assets/images/logo-checklist-verde-symbol.png" alt="Ícone de check">
+                        </div>
+                        <span class="logo-text">CHECKLIST VERDE</span>
+                    </a>
+                    <div class="menu">
+                        <nav class="nav-menu">
+                            <ul class="flex flex-column gap-0.25">
+                                <li class="button-ghost flex align-center gap-0.5">
+                                    <img src="../assets/icons/house.svg" alt="">
+                                    <a href="dashboard.html">Dashboard</a>
+                                </li>
+                                <li class="button-ghost flex align-center gap-0.5">
+                                    <img src="../assets/icons/check-circle.svg" alt="">
+                                    <a href="checklists.html">Checklists</a>
+                                </li>
+                                <li class="button-ghost flex align-center gap-0.5">
+                                    <img src="../assets/icons/gear.svg" alt="">
+                                    <a href="settings.html">Configurações</a>
+                                </li>
+                            </ul> 
+                        </nav>
+                        <input class="menu-toggle" type="checkbox">
+                    </div>
+                </div>
+            </header>
+            <main class="flex flex-column gap-1.5">
+                <section class="hero">
+                    <h1>Bem vindo, Brenon!</h1>
+                    <p>Sua jornada verde começa agora. Está pronto para o desafio?</p>
+                </section>
+                <section class="daily-xp-chart">
+                    <h2 class="section-title">Daily XP Progress</h2>
+                    <div class="chart">
+                        <div class="circle" id="circle1"></div>
+                        <div class="line" id="line1"></div>
+                        <div class="circle" id="circle2"></div>
+                        <div class="line" id="line2"></div>
+                        <div class="circle" id="circle3"></div>
+                        <div class="line" id="line3"></div>
+                        <div class="circle" id="circle4"></div>
+                        <div class="line" id="line4"></div>
+                        <div class="circle" id="circle5"></div>
+                        <div class="line" id="line5"></div>
+                        <div class="circle" id="circle6"></div>
+                        <div class="line" id="line6"></div>
+                        <div class="circle" id="circle7"></div>
+                        <div class="line" id="line7"></div>
+                        <div class="circle" id="circle8"></div>
+                        <div class="line" id="line8"></div>
+                    </div>
+                </section>
+                <section class="xp-summary">
+                    <div class="xp-summary-card xp-daily">
+                    <h3 class="summary-title">Today</h3>
+                    <p class="summary-value">+120 XP</p>
+                    </div>
+                    <div class="xp-summary-card xp-weekly">
+                    <h3 class="summary-title">This Week</h3>
+                    <p class="summary-value">+680 XP</p>
+                    </div>
+                    <div class="xp-summary-card xp-total">
+                    <h3 class="summary-title">All Time</h3>
+                    <p class="summary-value">+2,430 XP</p>
+                    </div>
+                </section>
+            </main>
+        </div>
+    </div>
      <script type="module" src="../scripts/app.js"></script>
 </body>
 </html>

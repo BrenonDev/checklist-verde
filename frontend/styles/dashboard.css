@@ -1,1 +1,25 @@
-/* Estilos da tela do painel */
+.dashboard {
+    & .container {
+        & .floating-window {
+            & header {
+                position: relative;
+                & nav {
+                    position: absolute;
+                    bottom: 0rem;
+                    right: calc(0rem - 0px);
+                    transform: translate(0%, calc(100% + 1px));
+                    font: var(--text-sm);
+                    padding: .3rem;
+                    & ul {
+                        /* display: flex;
+                        flex-direction: column; */
+                    }
+                }
+            }
+
+            & main {
+                
+            }
+        }
+    }
+}
