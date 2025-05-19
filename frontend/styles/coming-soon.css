@@ -2,20 +2,89 @@
     & .container {
         align-content: center;
         justify-content: center;
+
+        & .floating-window {
+            & main {
+                padding: 0;
+
+                & .card {
+                    width: max-content;
+                    margin-inline: auto;
         
-        & .card {
-            & .text {
-                font-family: var(--font-family-roboto-mono) !important;
-                font-size: 2.69vw !important;
-            }
-        }
-    
-        @media (width >= 35em) {
-            & .card {
-                & .text {
-                    font-size: clamp(1rem, 1.5vw, 2rem) !important;
+                    & div { 
+                        & .tools-emoji {
+                            text-align: center;
+                            font-size: 3rem !important;
+                            font-size: clamp(1.5rem, 5vw , 2.5rem) !important;
+                        }
+
+                        & .text {
+                            font-family: var(--font-family-roboto-mono) !important;
+                            font-size: clamp(.2rem, 2.5vw, 1rem) !important;
+                            text-align: center;
+                        }
+
+                        & img {
+                            animation: spinning 2.5s linear infinite;
+                            width: clamp(1rem, 5vw , 1.5rem);
+                            height: 1.5rem;
+                        }
+
+                        &:first-child {
+                            & img:first-child {
+                                animation-direction: normal;
+                            }
+
+                            & img:last-child {
+                                animation-direction: reverse;
+                            }
+                        }
+
+                        &:last-child {
+                            & img:first-child {
+                                animation-direction: reverse;
+                            }
+
+                            & img:last-child {
+                                animation-direction: normal;
+                            }
+                        }
+                    }
+
+                    @media (width >= 25em) {
+                        & div {
+                            & .text {
+                                font-size: 2.5vw !important;
+                            }
+                        }
+                    }
+            
+                    @media (width >= 31.25em) {
+                        & div {
+                            & .text {
+                                font-size: 2.3vw !important;
+                            }
+                        }
+                    }
+            
+                    @media (width >= 43.75em) {
+                        & div {
+                            & .text {
+                                font-size: clamp(.92rem, 1.5vw, 1rem) !important;
+                            }
+                        }
+                    }
                 }
             }
         }
+    }
+}
+
+@keyframes spinning {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
     }
 }

@@ -18,7 +18,7 @@
             opacity: 0.85;
             pointer-events: none;
             z-index: 0;
-            filter: drop-shadow(.3rem .3rem .25rem var(--shadow-primary));
+            filter: drop-shadow(.3rem .3rem .25rem var(--color-shadow-primary));
         }
         
         & main {
@@ -29,15 +29,15 @@
                     width: 60%;
                     font: var(--title-md);
                     line-height: 1.1;
-                    color: var(--green-darker);
-                    filter: drop-shadow(.1rem .1rem .15rem var(--shadow-secondary));
+                    color: var(--color-green-800);
+                    filter: drop-shadow(.1rem .1rem .15rem var(--color-shadow-secondary));
                 }
         
                 & p {
                     width: 55%;
                     margin-block: .5rem 1.3rem;
                     font: var(--text-sm);
-                    filter: drop-shadow(.1rem .1rem .15rem var(--shadow-secondary));
+                    filter: drop-shadow(.1rem .1rem .15rem var(--color-shadow-secondary));
                 }
             }
     
@@ -64,7 +64,7 @@
     
                 .card.checklist-feature {
                     & .icon {
-                        background-color: var(--green);
+                        background-color: var(--color-green-500);
                         border-radius: 20%;
         
                         & img {
@@ -75,12 +75,12 @@
         
                 .card.score-feature {
                     & .icon {
-                        background-color: var(--green);
+                        background-color: var(--color-green-500);
                         border-radius: 50%;
                         
                         & span {
-                            font: var(--xp);
-                            color: var(--gray-lightest);
+                            font: var(--xp-text);
+                            color: var(--color-gray-100);
                         }
                     }
                 }
@@ -101,12 +101,12 @@
     
             & p {
                 text-align: center;
-                filter: drop-shadow(.1rem .1rem .15rem var(--shadow-secondary));
+                filter: drop-shadow(.1rem .1rem .15rem var(--color-shadow-secondary));
     
                 &:first-child {
                     font-size: 1rem;
                     font-weight: 600;
-                    color: var(--green);
+                    color: var(--color-green-500);
                 }
                 
                 &:last-child {
@@ -593,7 +593,7 @@
                             height: 4rem;
     
                             & span {
-                                font: var(--xp);
+                                font: var(--xp-text);
                                 font-size: 1.9rem !important;
                                 color: var(--light-gray);
                             }

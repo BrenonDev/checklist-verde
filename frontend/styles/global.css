@@ -5,27 +5,47 @@
 }
 
 :root {
-    --black: #000000;
-    --white: #FFFFFF;
-    --green-darker: #162516;
-    --green-dark: #1E5E43;
-    --green: #257755;
-    --green-light: #3A8A69;
-    --green-lightest: #7DAD69;
-    --gray-darker: #212121;
-    --gray-dark: #333333;
-    --gray: #C6CCC9;
-    --gray-light: #E6EEE9;
-    --gray-lightest: #F0FAF4;
+    --color-white: #FFFFFF;
+    --color-black: #000000;
 
-    --shadow-primary: rgba(0, 0, 0, 0.3);
-    --shadow-secondary: rgba(0, 0, 0, 0.1);
+    --color-gray-100: #F0FAF1;
+    --color-gray-200: #E6EEE9;
+    --color-gray-300: #D6E0DC;
+    --color-gray-400: #C6CCC9;
+    --color-gray-500: #A1A1A1;
+    --color-gray-600: #6D6D6D;
+    --color-gray-700: #4A4A4A;
+    --color-gray-800: #333333;
+    --color-gray-900: #212121;
 
-    --gradient-yellow-start: #FFFFDC;
-    --gradient-green-end: #D2F0DC;
+    --color-green-100: #7DAD69;
+    --color-green-200: #6BA374;
+    --color-green-300: #5C9971;
+    --color-green-400: #3A8A69;
+    --color-green-500: #257755;
+    --color-green-600: #1E5E43;
+    --color-green-700: #193D2D;
+    --color-green-800: #162516;
+    --color-green-900: #0F1A10;
 
-    --link: #009688;
-    --link-hover: #546E7A;
+    --color-green-accent-100: #879079;
+    --color-green-accent-200: #829073;
+    --color-green-accent-300: #768161;
+    --color-green-accent-400: #6B7B5F;
+    --color-green-accent-500: #727852;
+    --color-green-accent-600: #5D613C;
+    --color-green-accent-700: #525D4F;
+    --color-green-accent-800: #414B41;
+    --color-green-accent-900: #323C32;
+
+    --color-shadow-primary: rgba(0, 0, 0, 0.3);
+    --color-shadow-secondary: rgba(0, 0, 0, 0.1);
+
+    --color-gradient-yellow-start: #FFFFDC;
+    --color-gradient-green-end: #D2F0DC;
+
+    --color-link: #009688;
+    --color-link-hover: #546E7A;
 
     --font-family-nunito: "Nunito", sans-serif;
     --font-family-roboto: "Roboto Condensed", sans-serif;
@@ -36,16 +56,17 @@
     --title-sm: 600 1.375rem var(--font-family-roboto);
     --title-md: 600 2rem var(--font-family-roboto);
     --title-lg: 600 3rem var(--font-family-roboto);
+    --text-xs: 400 .75rem var(--font-family-inter);
     --text-sm: 400 .875rem var(--font-family-inter);
     --text-md: 400 1rem var(--font-family-inter);
     --text-lg: 400 1.5rem var(--font-family-inter);
-    --xp: 400 1.7rem var(--font-family-nunito);
+    --xp-text: 400 1.7rem var(--font-family-nunito);
     --signature: 400 .875rem var(--font-family-roboto-mono);
 }
 
 body {
     font: var(--text-md);
-    background: linear-gradient(120deg, var(--gradient-yellow-start), var(--gradient-green-end));
+    background: linear-gradient(120deg, var(--color-gradient-yellow-start), var(--color-gradient-green-end));
     width: 100%;
 }
 
@@ -56,6 +77,6 @@ a, button, li {
 
 @media (width >= 50em) {
     & body {
-        background: linear-gradient(155deg, var(--gradient-yellow-start), var(--gradient-green-end));
+        background: linear-gradient(155deg, var(--color-gradient-yellow-start), var(--color-gradient-green-end));
     }
 }

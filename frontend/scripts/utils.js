@@ -1,7 +1,7 @@
 export function init() {
     console.log('utils.js inicializado');
 
-    const buttons = document.getElementsByClassName('coming-soon');
+    const buttons = document.getElementsByClassName('under-construction');
 
     for (const button of buttons) {
         button.addEventListener('click', function (event) {
@@ -14,6 +14,7 @@ export function init() {
 
     const toggle = document.querySelector('.menu-toggle');
     const menu = document.querySelector('.nav-menu');
+    const text = document.querySelectorAll('.nav-menu span');
     let hasInteracted = false;
 
     toggle.addEventListener('change', () => {
@@ -22,6 +23,10 @@ export function init() {
         if (hasInteracted) {
             menu.classList.remove('slideCloseMenu', 'slideOpenMenu');
             menu.classList.add(toggle.checked ? 'slideOpenMenu' : 'slideCloseMenu');
+            text.forEach(el => {
+                el.classList.remove('appear', 'disappear');
+                el.classList.add(toggle.checked ? 'appear' : 'disappear')
+            });
             toggle.classList.add('transition-enabled');
         }
     });
