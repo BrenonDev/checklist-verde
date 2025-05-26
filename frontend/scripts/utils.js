@@ -72,8 +72,6 @@ export function init() {
         '../assets/icons/menu-app-fill.svg',
         '../assets/icons/menu-app-fill.svg',
         '../assets/icons/menu-app-fill.svg',
-        '../assets/icons/menu-app-fill.svg',
-        '../assets/icons/menu-app-fill.svg',
         '../assets/icons/menu-button-fill.svg',
         '../assets/icons/menu-button-fill.svg',
         '../assets/icons/menu-button-wide-fill.svg',
@@ -106,4 +104,16 @@ export function init() {
             }, 70);
         }
     });
+
+//======================================================================\\
+
+    const circles = document.querySelectorAll('.circle');
+    const circleWidth = .7; // rem
+    const total = circles.length;
+    const gap = `(100% - ${total * circleWidth}rem) / ${total - 1}`;
+
+    circles.forEach((circle, i) => {
+        circle.style.left = `calc(${i * circleWidth}rem + ${i} * ${gap})`;
+    });
+
 }

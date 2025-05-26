@@ -5,18 +5,22 @@
 }
 
 :root {
+    --transparent: #00000000;
+
     --color-white: #FFFFFF;
     --color-black: #000000;
 
-    --color-gray-100: #F0FAF1;
-    --color-gray-200: #E6EEE9;
-    --color-gray-300: #D6E0DC;
-    --color-gray-400: #C6CCC9;
-    --color-gray-500: #A1A1A1;
-    --color-gray-600: #6D6D6D;
-    --color-gray-700: #4A4A4A;
-    --color-gray-800: #333333;
-    --color-gray-900: #212121;
+    --color-gray-050: #F0FAF1;
+    --color-gray-075: #E6EEE9;
+    --color-gray-100: #E7E7E7;
+    --color-gray-200: #CDCDCD;
+    --color-gray-300: #B4B4B4;
+    --color-gray-400: #9B9B9B;
+    --color-gray-500: #828282;
+    --color-gray-600: #696969;
+    --color-gray-700: #505050;
+    --color-gray-800: #373737;
+    --color-gray-900: #1E1E1E;
 
     --color-green-100: #7DAD69;
     --color-green-200: #6BA374;
@@ -45,7 +49,7 @@
     --color-gradient-green-end: #D2F0DC;
 
     --color-link: #009688;
-    --color-link-hover: #546E7A;
+    --color-link-hover: #006969;
 
     --font-family-nunito: "Nunito", sans-serif;
     --font-family-roboto: "Roboto Condensed", sans-serif;
@@ -73,6 +77,11 @@ body {
 a, button, li {
     all: unset;
     cursor: pointer;
+}
+
+img {
+    width: 100%;
+    height: 100%;
 }
 
 @media (width >= 50em) {

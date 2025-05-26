@@ -47,44 +47,71 @@
                     </div>
                 </div>
             </header>
-            <main class="flex flex-column gap-1.5">
-                <section class="hero">
+            <main class="grid gap-1">
+                <section class="hero card">
                     <h1>Bem vindo, Brenon!</h1>
                     <p>Sua jornada verde começa agora. Está pronto para o desafio?</p>
-                </section>
-                <section class="daily-xp-chart">
-                    <h2 class="section-title">Daily XP Progress</h2>
-                    <div class="chart">
-                        <div class="circle" id="circle1"></div>
-                        <div class="line" id="line1"></div>
-                        <div class="circle" id="circle2"></div>
-                        <div class="line" id="line2"></div>
-                        <div class="circle" id="circle3"></div>
-                        <div class="line" id="line3"></div>
-                        <div class="circle" id="circle4"></div>
-                        <div class="line" id="line4"></div>
-                        <div class="circle" id="circle5"></div>
-                        <div class="line" id="line5"></div>
-                        <div class="circle" id="circle6"></div>
-                        <div class="line" id="line6"></div>
-                        <div class="circle" id="circle7"></div>
-                        <div class="line" id="line7"></div>
-                        <div class="circle" id="circle8"></div>
-                        <div class="line" id="line8"></div>
+                    <div>
+                        <img src="../assets/images/hand-seedling.png" alt="">
                     </div>
                 </section>
-                <section class="xp-summary">
-                    <div class="xp-summary-card xp-daily">
-                    <h3 class="summary-title">Today</h3>
-                    <p class="summary-value">+120 XP</p>
+                <section class="xp-chart card">
+                    <h2>Progresso</h2>
+                    <div class="chart flex justify-center">
+                        <div class="circle-container" id="circleWrapper">
+                        <svg width="200" height="200">
+                            <circle class="bg-circle" cx="100" cy="100" r="85" />
+                            <circle class="progress-circle no-transition" cx="100" cy="100" r="85" />
+                        </svg>
+                        <div class="percentage"></div> <!-- Valor inicial zerado -->
+                        </div>
                     </div>
-                    <div class="xp-summary-card xp-weekly">
-                    <h3 class="summary-title">This Week</h3>
-                    <p class="summary-value">+680 XP</p>
+                </section>
+                <section class="xp-summary flex gap-1">
+                    <div class="xp-daily xp-summary-card card flex flex-column gap-0.75">
+                        <h3>Hoje</h3>
+                        <div class="information grid gap-0.25">
+                            <div class="task flex justify-center align-center gap-1">
+                                <div>
+                                    <img src="../assets/icons/checklist-dark.svg" alt="Ícone de checklist">
+                                </div>
+                                <p>3</p>
+                            </div>
+                            <div class="xp flex justify-center align-center gap-1">
+                                <span>XP</span>
+                                <p>70</p>
+                            </div>
+                        </div>
                     </div>
-                    <div class="xp-summary-card xp-total">
-                    <h3 class="summary-title">All Time</h3>
-                    <p class="summary-value">+2,430 XP</p>
+                    <div class="xp-weekly xp-summary-card card flex flex-column gap-0.75">
+                        <h3>Semanal</h3>
+                        <div class="information grid">
+                            <div class="task flex justify-center align-center gap-1">
+                                <div>
+                                    <img src="../assets/icons/checklist-dark.svg" alt="Ícone de checklist">
+                                </div>
+                                <p>21</p>
+                            </div>
+                            <div class="xp flex justify-center align-center gap-1">
+                                <span>XP</span>
+                                <p>21</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="xp-total xp-summary-card card flex flex-column gap-0.75">
+                        <h3>Total</h3>
+                        <div class="information grid gap-0.25">
+                            <div class="task flex justify-center align-center gap-1">
+                                <div>
+                                    <img src="../assets/icons/checklist-dark.svg" alt="Ícone de checklist">
+                                </div>
+                                <p>169</p>
+                            </div>
+                            <div class="xp flex justify-center align-center gap-1">
+                                <span>XP</span>
+                                <p>3,950</p>
+                            </div>
+                        </div>
                     </div>
                 </section>
             </main>
