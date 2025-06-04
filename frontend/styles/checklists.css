@@ -1,1 +1,94 @@
-/* Estilos da tela dos checklists */
+.checklists {
+    & .container {
+        & .floating-window {
+            gap: 0;
+            & main {
+                padding-top: 0;
+                & .title {
+                    text-align: center;
+
+                    & h1 {
+                        font: var(--xp-text);
+                    }
+                }
+
+                & .add-checklist {
+                    display: flex;
+                    width: max-content;
+                    padding: .7rem 1rem;
+                    cursor: pointer;
+
+                    & img {
+                        width: 1.5rem;
+                        height: 1.5rem;
+                    }
+                }
+
+                & .list-of-checklists {
+                    & .list-item {
+                        padding-inline: 1.2rem;
+
+                        &:hover {
+                            background-color: var(--color-gray-100);
+                            cursor: pointer;
+                        }
+
+                        & .image {
+                            width: 1.7rem;
+                            height: 1.7rem;
+                            line-height: 0;
+                        }
+
+                        & .edit {
+                            line-height: 0;
+                            margin-left: auto;
+                            width: 1.5rem;
+                            height: 1.5rem;
+                            position: relative;
+                            border: 1px solid red;
+                            
+                            & > img {
+                                transition: transform 250ms ease, filter 250ms ease;
+
+                                &:hover {
+                                    transform: rotate(180deg) scale(1.2);
+                                    filter: drop-shadow(0 0 .1rem var(--color-shadow-primary));
+                                }
+                            }
+
+                            & .edit-menu {
+                                position: absolute;
+                                border: 1px solid var(--color-green-400);
+                                top: 50%;
+                                left: 50%;
+                                transform: translate(-50%, -50%);
+                                padding: .5rem;
+                                border-radius: 1rem;
+                                background-color: var(--color-gray-050);
+
+                                & ul {
+                                    & li {
+                                        transition: filter 250ms ease;
+
+                                        & a {
+                                            transition: filter 250ms ease;
+
+                                            & span {
+                                                white-space: nowrap;
+                                                width: 100%;
+                                            }
+
+                                            &:hover {
+                                                filter: drop-shadow(0 .1rem .25rem var(--color-shadow-primary));
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

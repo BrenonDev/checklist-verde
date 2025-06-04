@@ -10,7 +10,87 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap" rel="stylesheet">
 </head>
 <body class="checklists">
-    <!-- Tela dos checklists -->
-     <script type="module" src="../scripts/app.js"></script>
+    <div class="container">
+        <div class="floating-window">
+            <header>
+                <div class="top-bar flex space-between align-start gap-0.5">
+                    <a href="../pages/welcome.html" class="logo flex align-center gap-0.5">
+                        <div class="logo-symbol">
+                            <img src="../assets/images/logo-checklist-verde-symbol.png" alt="Ícone de check">
+                        </div>
+                    </a>
+                    <div class="menu">
+                        <nav class="nav-menu">
+                            <ul class="flex flex-column space-between">
+                                <li>
+                                    <a class="button-ghost flex align-center gap-0.5" href="dashboard.html">
+                                        <img src="../assets/icons/house.svg" alt="">
+                                        <span>Painel Verde</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a class="button-ghost flex align-center gap-0.5" href="checklists.html">
+                                        <img src="../assets/icons/check-circle.svg" alt="">
+                                        <span>Checklists</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a class="button-ghost flex align-center gap-0.5 under-construction" href="settings.html">
+                                        <img src="../assets/icons/gear.svg" alt="">
+                                        <span>Configurações</span>
+                                    </a>
+                                </li>
+                            </ul> 
+                        </nav>
+                        <input class="menu-toggle" type="checkbox">
+                    </div>
+                </div>
+            </header>
+            <main class="grid gap-2">
+                <div class="title">
+                    <h1>CHECKLISTS</h1>
+                </div>
+                <div class="add-checklist button-float-light align-center gap-0.5">
+                    <img src="../assets/icons/clipboard-plus.svg" alt="">
+                    <span>NOVO CHECKLIST</span>
+                </div>
+                <div class="list-of-checklists">
+                    <div class="list-item card flex align-center gap-0.5">
+                        <div class="image">
+                            <img src="../assets/icons/ui-checks.svg" alt="">
+                        </div>
+                        <span>Título do Checklist</span>
+                        <div class="edit">
+                            <img src="../assets/icons/three-dots-vertical.svg" alt="">
+                            <div class="edit-menu">
+                                <ul class="flex flex-column space-between">
+                                    <li>
+                                        <a class="button-ghost flex align-center gap-0.5" href="dashboard.html">
+                                            <img src="../assets/icons/ui-checks-grid.svg" alt="">
+                                            <span>Entrar</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a class="button-ghost flex align-center gap-0.5" href="checklists.html">
+                                            <img src="../assets/icons/pencil.svg" alt="">
+                                            <span>Renomear</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a class="button-ghost flex align-center gap-0.5 under-construction" href="settings.html">
+                                            <img src="../assets/icons/trash.svg" alt="">
+                                            <span>Excluir</span>
+                                        </a>
+                                    </li>
+                                </ul> 
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </main>
+        </div>
+    </div>
+
+    <script type="module" src="../scripts/app.js"></script>
 </body>
 </html>
