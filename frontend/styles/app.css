@@ -4,6 +4,7 @@
 @import url(login.css);
 @import url(signup.css);
 @import url(dashboard.css);
-@import url(checklists.css);
+@import url(checklists-overview.css);
+@import url(checklist-detail.css);
 @import url(settings.css);
 @import url(coming-soon.css)

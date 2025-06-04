@@ -1,4 +1,4 @@
 export function init() {
-    console.log('checklists.js inicializado');
+    console.log('checklist-detail.js inicializado');
     // Scripts da tela dos checklists
   }

@@ -190,7 +190,7 @@ checklist-verde/
 │   │   ├── login.html      # Login
 │   │   ├── signup.html     # Cadastro
 │   │   ├── dashboard.html  # Painel
-│   │   ├── checklists.html # Checklists
+│   │   ├── checklists-overview.html # Checklists
 │   │   └── settings.html   # Configurações
 │   ├── styles/             # CSS
 │   │   ├── app.css         # Inicializador de estilos

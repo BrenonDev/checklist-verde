@@ -1,4 +1,4 @@
-.checklists {
+.checklists-overview {
     & .container {
         & .floating-window {
             gap: 0;
@@ -24,7 +24,7 @@
                     }
                 }
 
-                & .list-of-checklists {
+                & .checklists {
                     & .list-item {
                         padding-inline: 1.2rem;
 

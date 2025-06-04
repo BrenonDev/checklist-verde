@@ -15,9 +15,9 @@ document.addEventListener('DOMContentLoaded', () => {
         case 'login.html':
             import('./login.js')
             .then(module => {
-            if (typeof module.init === 'function') {
-                module.init();
-            }
+                if (typeof module.init === 'function') {
+                    module.init();
+                }
             })
             .catch(err => console.error('Erro ao carregar login.js:', err));
         break;
@@ -25,9 +25,9 @@ document.addEventListener('DOMContentLoaded', () => {
         case 'signup.html':
             import('./signup.js')
             .then(module => {
-            if (typeof module.init === 'function') {
-                module.init();
-            }
+                if (typeof module.init === 'function') {
+                    module.init();
+                }
             })
             .catch(err => console.error('Erro ao carregar signup.js:', err));
             break;
@@ -35,29 +35,39 @@ document.addEventListener('DOMContentLoaded', () => {
         case 'dashboard.html':
             import('./dashboard.js')
             .then(module => {
-            if (typeof module.init === 'function') {
-                module.init();
-            }
+                if (typeof module.init === 'function') {
+                    module.init();
+                }
             })
             .catch(err => console.error('Erro ao carregar dashboard.js:', err));
             break;
 
-        case 'checklists.html':
+        case 'checklists-overview.html':
             import('./checklists.js')
             .then(module => {
-            if (typeof module.init === 'function') {
-                module.init();
-            }
+                if (typeof module.init === 'function') {
+                    module.init();
+                }
             })
-            .catch(err => console.error('Erro ao carregar checklists.js:', err));
+            .catch(err => console.error('Erro ao carregar checklists-overview.js:', err));
+            break;
+
+        case 'checklist-detail.html':
+            import('./checklists.js')
+            .then(module => {
+                if (typeof module.init === 'function') {
+                    module.init();
+                }
+            })
+            .catch(err => console.error('Erro ao carregar checklist-detail.js:', err));
             break;
 
         case 'settings.html':
             import('./settings.js')
             .then(module => {
-            if (typeof module.init === 'function') {
-                module.init();
-            }
+                if (typeof module.init === 'function') {
+                    module.init();
+                }
             })
             .catch(err => console.error('Erro ao carregar settings.js:', err));
             break;
@@ -68,9 +78,9 @@ document.addEventListener('DOMContentLoaded', () => {
 
     import('./utils.js')
     .then(utils => {
-      if (typeof utils.init === 'function') {
-        utils.init();
-      }
+        if (typeof utils.init === 'function') {
+            utils.init();
+        }
     })
     .catch(err => console.error('Erro ao carregar utils.js:', err));
 });
