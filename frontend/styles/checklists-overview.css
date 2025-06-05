@@ -2,8 +2,14 @@
     & .container {
         & .floating-window {
             gap: 0;
+
+            & header {
+                height: 5rem;
+            }
+
             & main {
                 padding-top: 0;
+                
                 & .title {
                     text-align: center;
 
@@ -45,7 +51,6 @@
                             width: 1.5rem;
                             height: 1.5rem;
                             position: relative;
-                            border: 1px solid red;
                             
                             & > img {
                                 transition: transform 250ms ease, filter 250ms ease;
@@ -53,6 +58,12 @@
                                 &:hover {
                                     transform: rotate(180deg) scale(1.2);
                                     filter: drop-shadow(0 0 .1rem var(--color-shadow-primary));
+                                }
+                            }
+
+                            &:hover {
+                                & .edit-menu {
+                                    display: initial;
                                 }
                             }
 

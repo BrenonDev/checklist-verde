@@ -185,7 +185,6 @@
         
         & img {
             width: 100%;
-            /* scale: 1.69; */
             transform: translate(2.3%, -3.2%);
             filter: drop-shadow(.05rem .05rem .15rem var(--color-shadow-primary));
         }
